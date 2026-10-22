@@ -1,0 +1,4867 @@
+{
+ "version": "ktas-1",
+ "source": "Moon S-H et al. (2019) KTAS triage dataset, 1,267 adult ED visits, Korea. Kaggle: 'Emergency Service - Triage Application'. Label = KTAS_expert; KTAS 4-5 merged into P4.",
+ "csv_sha256": "0e2c088e358fd4cdfd0dcc2fd4c2f085aa303856e3a6df8ceb44a69cef8ed2de",
+ "sample": 150,
+ "seed": 7,
+ "split": "ktas-test",
+ "excluded_files": [
+  "ktas_cases.json"
+ ],
+ "cases": [
+  {
+   "id": "ktas0014",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P2",
+   "ktas_expert": 4,
+   "ktas_rn": 2,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 2. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 14",
+     "age_years": 55,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Abd pain. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 121.0,
+     "diastolic_bp": 78.0,
+     "pulse": 80.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.4,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0032",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P3",
+   "ktas_expert": 4,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 32",
+     "age_years": 65,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Vomiting.",
+    "vitals": {
+     "systolic_bp": 125.0,
+     "diastolic_bp": 82.0,
+     "pulse": 74.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.1,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0052",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 5,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 5, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 52",
+     "age_years": 39,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Both leg pain. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 130.0,
+     "diastolic_bp": 80.0,
+     "pulse": 93.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.3,
+     "spo2": 99.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0053",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P3",
+   "ktas_expert": 4,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 53",
+     "age_years": 81,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Left leg pain. Came after an injury. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 200.0,
+     "diastolic_bp": 160.0,
+     "pulse": 80.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.0,
+     "spo2": 98.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0064",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 5,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 5. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 64",
+     "age_years": 25,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Lip laceration. Came after an injury. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 138.0,
+     "diastolic_bp": 71.0,
+     "pulse": 76.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0070",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 5,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 5. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 70",
+     "age_years": 77,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Left wrist swelling. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 144.0,
+     "diastolic_bp": 86.0,
+     "pulse": 81.0,
+     "resp_rate": 16.0,
+     "temperature_c": 36.8,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0075",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P4",
+   "ktas_expert": 3,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 75",
+     "age_years": 70,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Epigastric pain. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 100.0,
+     "diastolic_bp": 60.0,
+     "pulse": 90.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.0,
+     "spo2": 98.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0077",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P4",
+   "ktas_expert": 3,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 77",
+     "age_years": 20,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "HA - Headache. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 100.0,
+     "diastolic_bp": 70.0,
+     "pulse": 84.0,
+     "resp_rate": 20.0,
+     "temperature_c": 37.6,
+     "spo2": 98.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0083",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 5,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 5. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 83",
+     "age_years": 58,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Edema, Cheek. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 169.0,
+     "diastolic_bp": 111.0,
+     "pulse": 93.0,
+     "resp_rate": 20.0,
+     "temperature_c": 37.5,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0085",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P4",
+   "ktas_expert": 3,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 85",
+     "age_years": 65,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Epigastric pain. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 100.0,
+     "diastolic_bp": 60.0,
+     "pulse": 92.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.4,
+     "spo2": 96.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0086",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P4",
+   "ktas_expert": 3,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 86",
+     "age_years": 74,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Epigastric pain. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 140.0,
+     "diastolic_bp": 100.0,
+     "pulse": 60.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.2,
+     "spo2": 97.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0087",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P4",
+   "ktas_expert": 3,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 87",
+     "age_years": 75,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Fever. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 150.0,
+     "diastolic_bp": 80.0,
+     "pulse": 64.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.5,
+     "spo2": 97.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0101",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P4",
+   "ktas_expert": 3,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 101",
+     "age_years": 78,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Acute epigastric pain. Pain 5/10.",
+    "vitals": {
+     "systolic_bp": 120.0,
+     "diastolic_bp": 80.0,
+     "pulse": 60.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.3,
+     "spo2": 99.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0111",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P4",
+   "ktas_expert": 3,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 111",
+     "age_years": 68,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Lt flank pain. Pain 6/10.",
+    "vitals": {
+     "systolic_bp": 160.0,
+     "diastolic_bp": 80.0,
+     "pulse": 66.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.2,
+     "spo2": 99.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0114",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P4",
+   "ktas_expert": 3,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 114",
+     "age_years": 73,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Both leg pain. Pain 7/10.",
+    "vitals": {
+     "systolic_bp": 214.0,
+     "diastolic_bp": 93.0,
+     "pulse": 81.0,
+     "resp_rate": 16.0,
+     "temperature_c": 37.1,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0116",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P3",
+   "ktas_expert": 2,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 116",
+     "age_years": 19,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Open Wound. Came after an injury. Pain 7/10.",
+    "vitals": {
+     "systolic_bp": 80.0,
+     "diastolic_bp": 50.0,
+     "pulse": 110.0,
+     "resp_rate": 22.0,
+     "temperature_c": 36.0,
+     "spo2": 98.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0126",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P3",
+   "ktas_expert": 2,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 126",
+     "age_years": 79,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "General weakness.",
+    "vitals": {
+     "systolic_bp": 214.0,
+     "diastolic_bp": 95.0,
+     "pulse": 66.0,
+     "resp_rate": 20.0,
+     "temperature_c": 37.2,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0131",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P3",
+   "ktas_expert": 2,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 131",
+     "age_years": 75,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Fever.",
+    "vitals": {
+     "systolic_bp": 100.0,
+     "diastolic_bp": 60.0,
+     "pulse": 92.0,
+     "resp_rate": 20.0,
+     "temperature_c": 38.0,
+     "spo2": 96.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0132",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P3",
+   "ktas_expert": 2,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 132",
+     "age_years": 80,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Dyspnea.",
+    "vitals": {
+     "systolic_bp": 140.0,
+     "diastolic_bp": 90.0,
+     "pulse": 32.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.7,
+     "spo2": 97.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0136",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P4",
+   "ktas_expert": 3,
+   "ktas_rn": 5,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 5. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 136",
+     "age_years": 34,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "General weakness.",
+    "vitals": {
+     "systolic_bp": 129.0,
+     "diastolic_bp": 94.0,
+     "pulse": 120.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.5,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0138",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 5,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 5. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 138",
+     "age_years": 60,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Weakness.",
+    "vitals": {
+     "systolic_bp": 158.0,
+     "diastolic_bp": 79.0,
+     "pulse": 93.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.1,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0139",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P3",
+   "ktas_expert": 2,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 139",
+     "age_years": 70,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Diffuse chest discomfort.",
+    "vitals": {
+     "systolic_bp": 100.0,
+     "diastolic_bp": 60.0,
+     "pulse": 60.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.0,
+     "spo2": 98.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0141",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P3",
+   "ktas_expert": 2,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 141",
+     "age_years": 73,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Dyspnea.",
+    "vitals": {
+     "systolic_bp": 140.0,
+     "diastolic_bp": 80.0,
+     "pulse": 86.0,
+     "resp_rate": 24.0,
+     "temperature_c": 36.4,
+     "spo2": 89.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0155",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P4",
+   "ktas_expert": 3,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 155",
+     "age_years": 74,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Acute delirium.",
+    "vitals": {
+     "systolic_bp": 100.0,
+     "diastolic_bp": 60.0,
+     "pulse": 75.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.5,
+     "spo2": 98.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0157",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P4",
+   "ktas_expert": 2,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 157",
+     "age_years": 35,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Fever.",
+    "vitals": {
+     "systolic_bp": 123.0,
+     "diastolic_bp": 73.0,
+     "pulse": 98.0,
+     "resp_rate": 20.0,
+     "temperature_c": 38.2,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0158",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P3",
+   "ktas_expert": 2,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 158",
+     "age_years": 61,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Fever.",
+    "vitals": {
+     "systolic_bp": 102.0,
+     "diastolic_bp": 81.0,
+     "pulse": 109.0,
+     "resp_rate": 20.0,
+     "temperature_c": 39.4,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0161",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P3",
+   "ktas_expert": 2,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 161",
+     "age_years": 57,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Generalized abdominal pain.",
+    "vitals": {
+     "systolic_bp": 90.0,
+     "diastolic_bp": 60.0,
+     "pulse": 128.0,
+     "resp_rate": 22.0,
+     "temperature_c": 36.0,
+     "spo2": 99.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0172",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P3",
+   "ktas_expert": 2,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 172",
+     "age_years": 27,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Fever.",
+    "vitals": {
+     "systolic_bp": 140.0,
+     "diastolic_bp": 94.0,
+     "pulse": 105.0,
+     "resp_rate": 20.0,
+     "temperature_c": 39.5,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0178",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P4",
+   "ktas_expert": 3,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 178",
+     "age_years": 30,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Upper abdominal pain. Pain 5/10.",
+    "vitals": {
+     "systolic_bp": 120.0,
+     "diastolic_bp": 80.0,
+     "pulse": 74.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.3,
+     "spo2": 98.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0188",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 5,
+   "ktas_rn": 5,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 5, nurse 5. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 188",
+     "age_years": 56,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "FB in eye. Came after an injury. Pain 2/10.",
+    "vitals": {
+     "systolic_bp": 190.0,
+     "diastolic_bp": 110.0,
+     "pulse": 58.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.3,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0204",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 204",
+     "age_years": 52,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Epigastric pain. Pain 2/10.",
+    "vitals": {
+     "systolic_bp": 130.0,
+     "diastolic_bp": 90.0,
+     "pulse": 78.0,
+     "resp_rate": 22.0,
+     "temperature_c": 36.0,
+     "spo2": 99.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0206",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 206",
+     "age_years": 54,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Vomiting. Pain 2/10.",
+    "vitals": {
+     "systolic_bp": 124.0,
+     "diastolic_bp": 73.0,
+     "pulse": 79.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.5,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0217",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 217",
+     "age_years": 64,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Pain, flank. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 150.0,
+     "diastolic_bp": 87.0,
+     "pulse": 79.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.5,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0219",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P2",
+   "ktas_expert": 2,
+   "ktas_rn": 2,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 219",
+     "age_years": 75,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Pain, chest. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 141.0,
+     "diastolic_bp": 77.0,
+     "pulse": 45.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0231",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 231",
+     "age_years": 35,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Acute epigastric pain. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 141.0,
+     "diastolic_bp": 83.0,
+     "pulse": 58.0,
+     "resp_rate": 16.0,
+     "temperature_c": 36.2,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0240",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 240",
+     "age_years": 20,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Left knee swelling. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 166.0,
+     "diastolic_bp": 77.0,
+     "pulse": 85.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.8,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0243",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 243",
+     "age_years": 22,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Abd pain. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 96.0,
+     "diastolic_bp": 71.0,
+     "pulse": 79.0,
+     "resp_rate": 20.0,
+     "temperature_c": 37.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0273",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 273",
+     "age_years": 29,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Vomiting. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 138.0,
+     "diastolic_bp": 88.0,
+     "pulse": 97.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0293",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 293",
+     "age_years": 35,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Ocular pain, Lt.. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 110.0,
+     "diastolic_bp": 70.0,
+     "pulse": 74.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.6,
+     "spo2": 98.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0311",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 5,
+   "ktas_rn": 5,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 5, nurse 5. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 311",
+     "age_years": 40,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Leg pain, NOS. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 110.0,
+     "diastolic_bp": 80.0,
+     "pulse": 80.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.4,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0319",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 319",
+     "age_years": 43,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Rt. flank pain. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 123.0,
+     "diastolic_bp": 72.0,
+     "pulse": 75.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.4,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0322",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 322",
+     "age_years": 44,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "LLQ pain. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 100.0,
+     "diastolic_bp": 60.0,
+     "pulse": 76.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.4,
+     "spo2": 95.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0340",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 340",
+     "age_years": 50,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Rt flank pain. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 145.0,
+     "diastolic_bp": 92.0,
+     "pulse": 65.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.6,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0342",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 342",
+     "age_years": 51,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "H-Headache. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 150.0,
+     "diastolic_bp": 100.0,
+     "pulse": 98.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.4,
+     "spo2": 98.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0358",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 358",
+     "age_years": 57,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Epigastric pain. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 111.0,
+     "diastolic_bp": 57.0,
+     "pulse": 56.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.2,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0359",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 5,
+   "ktas_rn": 5,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 5, nurse 5. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 359",
+     "age_years": 57,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "For medication. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 133.0,
+     "diastolic_bp": 74.0,
+     "pulse": 98.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0363",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 363",
+     "age_years": 57,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Headache. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 180.0,
+     "diastolic_bp": 100.0,
+     "pulse": 68.0,
+     "resp_rate": 22.0,
+     "temperature_c": 36.2,
+     "spo2": 98.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0367",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 367",
+     "age_years": 58,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Abdominal pain, Rt. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 160.0,
+     "diastolic_bp": 100.0,
+     "pulse": 98.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.5,
+     "spo2": 97.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0371",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 371",
+     "age_years": 59,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "LLQ pain. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 142.0,
+     "diastolic_bp": 89.0,
+     "pulse": 135.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.8,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0372",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 372",
+     "age_years": 59,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Abd pain. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 163.0,
+     "diastolic_bp": 83.0,
+     "pulse": 71.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.2,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0391",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P2",
+   "ktas_expert": 2,
+   "ktas_rn": 2,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 391",
+     "age_years": 66,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Ant. chest pain. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 120.0,
+     "diastolic_bp": 80.0,
+     "pulse": 63.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.0,
+     "spo2": 97.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0396",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 396",
+     "age_years": 69,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Dizziness. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 170.0,
+     "diastolic_bp": 100.0,
+     "pulse": 80.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.2,
+     "spo2": 99.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0400",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P2",
+   "ktas_expert": 2,
+   "ktas_rn": 2,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 400",
+     "age_years": 71,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Ant. chest pain. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 160.0,
+     "diastolic_bp": 90.0,
+     "pulse": 74.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.7,
+     "spo2": 98.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0406",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P2",
+   "ktas_expert": 2,
+   "ktas_rn": 2,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 406",
+     "age_years": 72,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Dyspnea. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 100.0,
+     "diastolic_bp": 60.0,
+     "pulse": 106.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.1,
+     "spo2": 93.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0407",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 407",
+     "age_years": 72,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Epigastric pain. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 125.0,
+     "diastolic_bp": 66.0,
+     "pulse": 97.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0432",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 432",
+     "age_years": 79,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Abdomen pain. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 130.0,
+     "diastolic_bp": 80.0,
+     "pulse": 60.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.4,
+     "spo2": 97.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0436",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 436",
+     "age_years": 80,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Abdomen pain. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 142.0,
+     "diastolic_bp": 80.0,
+     "pulse": 106.0,
+     "resp_rate": 20.0,
+     "temperature_c": 37.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0450",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 450",
+     "age_years": 52,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Distended abdomen. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 155.0,
+     "diastolic_bp": 88.0,
+     "pulse": 105.0,
+     "resp_rate": 20.0,
+     "temperature_c": 37.8,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0463",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 463",
+     "age_years": 23,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Toe injury. Came after an injury. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 119.0,
+     "diastolic_bp": 56.0,
+     "pulse": 75.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.5,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0474",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 474",
+     "age_years": 25,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Pain, Hand. Came after an injury. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 137.0,
+     "diastolic_bp": 110.0,
+     "pulse": 89.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.9,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0480",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 480",
+     "age_years": 30,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Headache. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 140.0,
+     "diastolic_bp": 80.0,
+     "pulse": 76.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.3,
+     "spo2": 99.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0482",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 482",
+     "age_years": 33,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Foot Injury. Came after an injury. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 112.0,
+     "diastolic_bp": 72.0,
+     "pulse": 56.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.9,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0493",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 493",
+     "age_years": 43,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Open Wound. Came after an injury. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 130.0,
+     "diastolic_bp": 80.0,
+     "pulse": 88.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.1,
+     "spo2": 96.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0513",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 513",
+     "age_years": 53,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Pain, foot. Came after an injury. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 163.0,
+     "diastolic_bp": 77.0,
+     "pulse": 62.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.8,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0519",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 519",
+     "age_years": 57,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Facial injury. Came after an injury. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 158.0,
+     "diastolic_bp": 97.0,
+     "pulse": 62.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.7,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0522",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 522",
+     "age_years": 59,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Pain, abdominal. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 98.0,
+     "diastolic_bp": 70.0,
+     "pulse": 75.0,
+     "resp_rate": 16.0,
+     "temperature_c": 36.3,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0524",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 524",
+     "age_years": 60,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Wrist pain, Lt. Came after an injury. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 141.0,
+     "diastolic_bp": 65.0,
+     "pulse": 70.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.6,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0526",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 526",
+     "age_years": 60,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Abd pain. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 198.0,
+     "diastolic_bp": 117.0,
+     "pulse": 137.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.6,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0529",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P2",
+   "ktas_expert": 2,
+   "ktas_rn": 2,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 529",
+     "age_years": 63,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Left chest pain. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 140.0,
+     "diastolic_bp": 90.0,
+     "pulse": 98.0,
+     "resp_rate": 24.0,
+     "temperature_c": 36.0,
+     "spo2": 99.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0548",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 548",
+     "age_years": 77,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Hip pain Lt.. Came after an injury. Pain 4/10.",
+    "vitals": {
+     "systolic_bp": 150.0,
+     "diastolic_bp": 100.0,
+     "pulse": 88.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.2,
+     "spo2": 97.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0575",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 575",
+     "age_years": 23,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Pain, abdominal. Pain 5/10.",
+    "vitals": {
+     "systolic_bp": 102.0,
+     "diastolic_bp": 72.0,
+     "pulse": 76.0,
+     "resp_rate": 18.0,
+     "temperature_c": 37.2,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0578",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 578",
+     "age_years": 25,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "RLQ pain. Pain 5/10.",
+    "vitals": {
+     "systolic_bp": 152.0,
+     "diastolic_bp": 88.0,
+     "pulse": 90.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0590",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 590",
+     "age_years": 31,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Abd pain. Pain 5/10.",
+    "vitals": {
+     "systolic_bp": 91.0,
+     "diastolic_bp": 54.0,
+     "pulse": 98.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.9,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0596",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 596",
+     "age_years": 34,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Fever. Pain 5/10.",
+    "vitals": {
+     "systolic_bp": 144.0,
+     "diastolic_bp": 71.0,
+     "pulse": 91.0,
+     "resp_rate": 16.0,
+     "temperature_c": 37.8,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0600",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 600",
+     "age_years": 36,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Abd pain. Pain 5/10.",
+    "vitals": {
+     "systolic_bp": 135.0,
+     "diastolic_bp": 86.0,
+     "pulse": 79.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.8,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0615",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 615",
+     "age_years": 50,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Injury, ankle. Came after an injury. Pain 5/10.",
+    "vitals": {
+     "systolic_bp": 166.0,
+     "diastolic_bp": 80.0,
+     "pulse": 61.0,
+     "resp_rate": 20.0,
+     "temperature_c": 37.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0633",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 633",
+     "age_years": 60,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Abd pain. Pain 5/10.",
+    "vitals": {
+     "systolic_bp": 140.0,
+     "diastolic_bp": 84.0,
+     "pulse": 102.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.7,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0643",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 643",
+     "age_years": 66,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Voiding difficulty. Pain 5/10.",
+    "vitals": {
+     "systolic_bp": 136.0,
+     "diastolic_bp": 84.0,
+     "pulse": 89.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0648",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 648",
+     "age_years": 68,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Pain, abdominal. Pain 5/10.",
+    "vitals": {
+     "systolic_bp": 107.0,
+     "diastolic_bp": 73.0,
+     "pulse": 102.0,
+     "resp_rate": 16.0,
+     "temperature_c": 36.3,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0651",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 651",
+     "age_years": 68,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Abd pain. Pain 5/10.",
+    "vitals": {
+     "systolic_bp": 130.0,
+     "diastolic_bp": 90.0,
+     "pulse": 96.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.2,
+     "spo2": 98.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0653",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 653",
+     "age_years": 72,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Leg pain. Pain 5/10.",
+    "vitals": {
+     "systolic_bp": 165.0,
+     "diastolic_bp": 78.0,
+     "pulse": 64.0,
+     "resp_rate": 16.0,
+     "temperature_c": 36.8,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0663",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 663",
+     "age_years": 78,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Headache. Pain 5/10.",
+    "vitals": {
+     "systolic_bp": 146.0,
+     "diastolic_bp": 63.0,
+     "pulse": 110.0,
+     "resp_rate": 20.0,
+     "temperature_c": 37.4,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0665",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P2",
+   "ktas_expert": 2,
+   "ktas_rn": 2,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 665",
+     "age_years": 85,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Ant. chest pain. Pain 5/10.",
+    "vitals": {
+     "systolic_bp": 190.0,
+     "diastolic_bp": 100.0,
+     "pulse": 66.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.6,
+     "spo2": 96.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0675",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 675",
+     "age_years": 23,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Finger Injury. Came after an injury. Pain 6/10.",
+    "vitals": {
+     "systolic_bp": 159.0,
+     "diastolic_bp": 89.0,
+     "pulse": 108.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.2,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0692",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 692",
+     "age_years": 47,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Foreign Body Sense. Came after an injury. Pain 6/10.",
+    "vitals": {
+     "systolic_bp": 120.0,
+     "diastolic_bp": 80.0,
+     "pulse": 76.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.3,
+     "spo2": 96.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0697",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 697",
+     "age_years": 55,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Bee sting. Came after an injury. Pain 6/10.",
+    "vitals": {
+     "systolic_bp": 142.0,
+     "diastolic_bp": 92.0,
+     "pulse": 66.0,
+     "resp_rate": 18.0,
+     "temperature_c": 37.2,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0707",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P2",
+   "ktas_expert": 2,
+   "ktas_rn": 2,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 707",
+     "age_years": 62,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Left chest pain. Pain 6/10.",
+    "vitals": {
+     "systolic_bp": 110.0,
+     "diastolic_bp": 80.0,
+     "pulse": 78.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.2,
+     "spo2": 98.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0723",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P2",
+   "ktas_expert": 2,
+   "ktas_rn": 2,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 723",
+     "age_years": 78,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Ant. chest pain. Pain 6/10.",
+    "vitals": {
+     "systolic_bp": 120.0,
+     "diastolic_bp": 60.0,
+     "pulse": 100.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.3,
+     "spo2": 99.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0726",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 726",
+     "age_years": 56,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Abd pain. Pain 7/10.",
+    "vitals": {
+     "systolic_bp": 133.0,
+     "diastolic_bp": 72.0,
+     "pulse": 88.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.5,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0736",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 736",
+     "age_years": 36,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Abd pain. Pain 7/10.",
+    "vitals": {
+     "systolic_bp": 131.0,
+     "diastolic_bp": 70.0,
+     "pulse": 53.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.6,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0755",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 755",
+     "age_years": 55,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Finger pain. Came after an injury. Pain 8/10.",
+    "vitals": {
+     "systolic_bp": 202.0,
+     "diastolic_bp": 102.0,
+     "pulse": 71.0,
+     "resp_rate": 18.0,
+     "temperature_c": 37.3,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0756",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P2",
+   "ktas_expert": 2,
+   "ktas_rn": 2,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 756",
+     "age_years": 56,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Upper back pain. Pain 8/10.",
+    "vitals": {
+     "systolic_bp": 180.0,
+     "diastolic_bp": 100.0,
+     "pulse": 84.0,
+     "resp_rate": 22.0,
+     "temperature_c": 36.0,
+     "spo2": 100.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0759",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P2",
+   "ktas_expert": 2,
+   "ktas_rn": 2,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 759",
+     "age_years": 37,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Pain, chest. Pain 10/10.",
+    "vitals": {
+     "systolic_bp": 75.0,
+     "diastolic_bp": 54.0,
+     "pulse": 95.0,
+     "resp_rate": 28.0,
+     "temperature_c": 36.3,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0762",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 762",
+     "age_years": 71,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "For PEG tube change.",
+    "vitals": {
+     "systolic_bp": 119.0,
+     "diastolic_bp": 73.0,
+     "pulse": 89.0,
+     "resp_rate": 16.0,
+     "temperature_c": 36.8,
+     "consciousness": "V"
+    }
+   }
+  },
+  {
+   "id": "ktas0765",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 765",
+     "age_years": 69,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "High BSL.",
+    "vitals": {
+     "systolic_bp": 197.0,
+     "diastolic_bp": 88.0,
+     "pulse": 63.0,
+     "resp_rate": 16.0,
+     "temperature_c": 36.8,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0773",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 773",
+     "age_years": 81,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Dizziness.",
+    "vitals": {
+     "systolic_bp": 154.0,
+     "diastolic_bp": 96.0,
+     "pulse": 78.0,
+     "resp_rate": 18.0,
+     "temperature_c": 35.7,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0787",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 787",
+     "age_years": 68,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Vomiting.",
+    "vitals": {
+     "systolic_bp": 147.0,
+     "diastolic_bp": 69.0,
+     "pulse": 66.0,
+     "resp_rate": 20.0,
+     "temperature_c": 37.3,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0793",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 793",
+     "age_years": 59,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Free voiding.",
+    "vitals": {
+     "systolic_bp": 112.0,
+     "diastolic_bp": 80.0,
+     "pulse": 100.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.5,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0809",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 5,
+   "ktas_rn": 5,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 5, nurse 5. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 809",
+     "age_years": 85,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Swelling, facial. Came after an injury.",
+    "vitals": {
+     "systolic_bp": 120.0,
+     "diastolic_bp": 80.0,
+     "pulse": 74.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0819",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 819",
+     "age_years": 76,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "General weakness.",
+    "vitals": {
+     "systolic_bp": 168.0,
+     "diastolic_bp": 78.0,
+     "pulse": 81.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.5,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0822",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 822",
+     "age_years": 77,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Dizziness.",
+    "vitals": {
+     "systolic_bp": 108.0,
+     "diastolic_bp": 66.0,
+     "pulse": 66.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.6,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0837",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 837",
+     "age_years": 20,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "??? ??? ??.",
+    "vitals": {
+     "systolic_bp": 163.0,
+     "diastolic_bp": 85.0,
+     "pulse": 100.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0838",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 838",
+     "age_years": 20,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Finger laceration. Came after an injury.",
+    "vitals": {
+     "systolic_bp": 154.0,
+     "diastolic_bp": 86.0,
+     "pulse": 98.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.4,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0845",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 845",
+     "age_years": 22,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "????.",
+    "vitals": {
+     "systolic_bp": 99.0,
+     "diastolic_bp": 65.0,
+     "pulse": 74.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.6,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0852",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P2",
+   "ktas_expert": 2,
+   "ktas_rn": 2,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 852",
+     "age_years": 24,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Post seizure.",
+    "vitals": {
+     "systolic_bp": 144.0,
+     "diastolic_bp": 84.0,
+     "pulse": 88.0,
+     "resp_rate": 18.0,
+     "temperature_c": 37.4,
+     "consciousness": "V"
+    }
+   }
+  },
+  {
+   "id": "ktas0860",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 860",
+     "age_years": 25,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Vomiting.",
+    "vitals": {
+     "systolic_bp": 168.0,
+     "diastolic_bp": 106.0,
+     "pulse": 81.0,
+     "resp_rate": 22.0,
+     "temperature_c": 37.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0863",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 863",
+     "age_years": 26,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Dizziness.",
+    "vitals": {
+     "systolic_bp": 119.0,
+     "diastolic_bp": 76.0,
+     "pulse": 72.0,
+     "resp_rate": 16.0,
+     "temperature_c": 36.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0876",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 876",
+     "age_years": 29,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Eyebrow laceration. Came after an injury.",
+    "vitals": {
+     "systolic_bp": 139.0,
+     "diastolic_bp": 78.0,
+     "pulse": 89.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.6,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0878",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 878",
+     "age_years": 29,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Diarrhea.",
+    "vitals": {
+     "systolic_bp": 138.0,
+     "diastolic_bp": 85.0,
+     "pulse": 126.0,
+     "resp_rate": 20.0,
+     "temperature_c": 37.4,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0886",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 886",
+     "age_years": 32,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Post seizure.",
+    "vitals": {
+     "systolic_bp": 164.0,
+     "diastolic_bp": 90.0,
+     "pulse": 111.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0887",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 887",
+     "age_years": 32,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Epistaxis.",
+    "vitals": {
+     "systolic_bp": 136.0,
+     "diastolic_bp": 85.0,
+     "pulse": 100.0,
+     "resp_rate": 16.0,
+     "temperature_c": 36.1,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0898",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 898",
+     "age_years": 34,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Anterior chest discomfort. Came after an injury.",
+    "vitals": {
+     "systolic_bp": 120.0,
+     "diastolic_bp": 80.0,
+     "pulse": 66.0,
+     "resp_rate": 20.0,
+     "temperature_c": 37.5,
+     "spo2": 99.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0903",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 903",
+     "age_years": 36,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Vaginal bleeding. Came after an injury.",
+    "vitals": {
+     "systolic_bp": 129.0,
+     "diastolic_bp": 69.0,
+     "pulse": 58.0,
+     "resp_rate": 16.0,
+     "temperature_c": 36.7,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0905",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 905",
+     "age_years": 36,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "????.",
+    "vitals": {
+     "systolic_bp": 157.0,
+     "diastolic_bp": 100.0,
+     "pulse": 66.0,
+     "resp_rate": 22.0,
+     "temperature_c": 36.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0909",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 909",
+     "age_years": 37,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Vaginal bleeding.",
+    "vitals": {
+     "systolic_bp": 140.0,
+     "diastolic_bp": 90.0,
+     "pulse": 103.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.2,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0915",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 915",
+     "age_years": 40,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Open Wound. Came after an injury.",
+    "vitals": {
+     "systolic_bp": 110.0,
+     "diastolic_bp": 70.0,
+     "pulse": 80.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.7,
+     "spo2": 98.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0919",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 919",
+     "age_years": 41,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Facial injury. Came after an injury.",
+    "vitals": {
+     "systolic_bp": 158.0,
+     "diastolic_bp": 93.0,
+     "pulse": 89.0,
+     "resp_rate": 16.0,
+     "temperature_c": 36.7,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0921",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 921",
+     "age_years": 41,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Diarrhea.",
+    "vitals": {
+     "systolic_bp": 117.0,
+     "diastolic_bp": 71.0,
+     "pulse": 94.0,
+     "resp_rate": 16.0,
+     "temperature_c": 37.1,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0923",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 923",
+     "age_years": 41,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Facial palsy left.",
+    "vitals": {
+     "systolic_bp": 150.0,
+     "diastolic_bp": 82.0,
+     "pulse": 70.0,
+     "resp_rate": 16.0,
+     "temperature_c": 36.4,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0925",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 925",
+     "age_years": 41,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Forehead laceration. Came after an injury.",
+    "vitals": {
+     "systolic_bp": 124.0,
+     "diastolic_bp": 78.0,
+     "pulse": 83.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.2,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0929",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 929",
+     "age_years": 43,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Facial Palsy.",
+    "vitals": {
+     "systolic_bp": 160.0,
+     "diastolic_bp": 94.0,
+     "pulse": 88.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.4,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0934",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 934",
+     "age_years": 44,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "??? ??.",
+    "vitals": {
+     "systolic_bp": 139.0,
+     "diastolic_bp": 86.0,
+     "pulse": 51.0,
+     "resp_rate": 16.0,
+     "temperature_c": 36.2,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0935",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 935",
+     "age_years": 44,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Dizziness.",
+    "vitals": {
+     "systolic_bp": 170.0,
+     "diastolic_bp": 92.0,
+     "pulse": 70.0,
+     "resp_rate": 20.0,
+     "temperature_c": 37.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0938",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 938",
+     "age_years": 45,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Syncope.",
+    "vitals": {
+     "systolic_bp": 100.0,
+     "diastolic_bp": 60.0,
+     "pulse": 82.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.4,
+     "spo2": 98.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0953",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P2",
+   "ktas_expert": 2,
+   "ktas_rn": 2,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 953",
+     "age_years": 48,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Dyspnea.",
+    "vitals": {
+     "systolic_bp": 79.0,
+     "diastolic_bp": 40.0,
+     "pulse": 125.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.9,
+     "consciousness": "V"
+    }
+   }
+  },
+  {
+   "id": "ktas0963",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 963",
+     "age_years": 50,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Skin defect. Came after an injury.",
+    "vitals": {
+     "systolic_bp": 151.0,
+     "diastolic_bp": 93.0,
+     "pulse": 74.0,
+     "resp_rate": 16.0,
+     "temperature_c": 36.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0970",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 970",
+     "age_years": 51,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Whirling type vertigo.",
+    "vitals": {
+     "systolic_bp": 140.0,
+     "diastolic_bp": 70.0,
+     "pulse": 72.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.2,
+     "spo2": 96.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0971",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P2",
+   "ktas_expert": 2,
+   "ktas_rn": 2,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 971",
+     "age_years": 52,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Melena.",
+    "vitals": {
+     "systolic_bp": 190.0,
+     "diastolic_bp": 100.0,
+     "pulse": 80.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.0,
+     "spo2": 98.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0976",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P2",
+   "ktas_expert": 2,
+   "ktas_rn": 2,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 976",
+     "age_years": 52,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Hematemesis.",
+    "vitals": {
+     "systolic_bp": 100.0,
+     "diastolic_bp": 60.0,
+     "pulse": 100.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.6,
+     "spo2": 98.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0982",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 982",
+     "age_years": 53,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Dizziness.",
+    "vitals": {
+     "systolic_bp": 103.0,
+     "diastolic_bp": 67.0,
+     "pulse": 70.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.5,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0990",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 990",
+     "age_years": 54,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Dysarthria. Came after an injury.",
+    "vitals": {
+     "systolic_bp": 169.0,
+     "diastolic_bp": 110.0,
+     "pulse": 100.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.9,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas0996",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 996",
+     "age_years": 56,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Voiding difficulty.",
+    "vitals": {
+     "systolic_bp": 107.0,
+     "diastolic_bp": 65.0,
+     "pulse": 83.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas1002",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P2",
+   "ktas_expert": 2,
+   "ktas_rn": 2,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 1002",
+     "age_years": 57,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Eye trauma. Came after an injury.",
+    "vitals": {
+     "systolic_bp": 157.0,
+     "diastolic_bp": 97.0,
+     "pulse": 82.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas1003",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 1003",
+     "age_years": 57,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Palpitation.",
+    "vitals": {
+     "systolic_bp": 130.0,
+     "diastolic_bp": 90.0,
+     "pulse": 106.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.5,
+     "spo2": 99.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas1031",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 1031",
+     "age_years": 61,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "PTBD malfunction.",
+    "vitals": {
+     "systolic_bp": 101.0,
+     "diastolic_bp": 73.0,
+     "pulse": 93.0,
+     "resp_rate": 16.0,
+     "temperature_c": 36.4,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas1042",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 5,
+   "ktas_rn": 5,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 5, nurse 5. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 1042",
+     "age_years": 64,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Distension, abd.",
+    "vitals": {
+     "systolic_bp": 120.0,
+     "diastolic_bp": 79.0,
+     "pulse": 86.0,
+     "resp_rate": 16.0,
+     "temperature_c": 36.7,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas1053",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 1053",
+     "age_years": 65,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Hematochezia.",
+    "vitals": {
+     "systolic_bp": 130.0,
+     "diastolic_bp": 100.0,
+     "pulse": 74.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.3,
+     "spo2": 99.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas1058",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 1058",
+     "age_years": 66,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Motor weakness.",
+    "vitals": {
+     "systolic_bp": 156.0,
+     "diastolic_bp": 73.0,
+     "pulse": 82.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.9,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas1059",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P2",
+   "ktas_expert": 2,
+   "ktas_rn": 2,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 1059",
+     "age_years": 66,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Hematemesis.",
+    "vitals": {
+     "systolic_bp": 162.0,
+     "diastolic_bp": 97.0,
+     "pulse": 81.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.8,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas1077",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 1077",
+     "age_years": 68,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Motor weakness.",
+    "vitals": {
+     "systolic_bp": 163.0,
+     "diastolic_bp": 90.0,
+     "pulse": 100.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.6,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas1082",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 1082",
+     "age_years": 69,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Fever.",
+    "vitals": {
+     "systolic_bp": 140.0,
+     "diastolic_bp": 80.0,
+     "pulse": 98.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.6,
+     "spo2": 98.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas1091",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 1091",
+     "age_years": 69,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Dyspnea.",
+    "vitals": {
+     "systolic_bp": 100.0,
+     "diastolic_bp": 70.0,
+     "pulse": 88.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.7,
+     "spo2": 99.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas1099",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P2",
+   "nurse_priority": "P2",
+   "ktas_expert": 2,
+   "ktas_rn": 2,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 1099",
+     "age_years": 70,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Mental change.",
+    "vitals": {
+     "systolic_bp": 170.0,
+     "diastolic_bp": 100.0,
+     "pulse": 88.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.5,
+     "spo2": 99.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas1109",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 1109",
+     "age_years": 72,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Rigth side weakness.",
+    "vitals": {
+     "systolic_bp": 204.0,
+     "diastolic_bp": 98.0,
+     "pulse": 137.0,
+     "resp_rate": 18.0,
+     "temperature_c": 38.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas1161",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 1161",
+     "age_years": 79,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Dyspnea.",
+    "vitals": {
+     "systolic_bp": 100.0,
+     "diastolic_bp": 70.0,
+     "pulse": 62.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.0,
+     "spo2": 97.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas1167",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 1167",
+     "age_years": 79,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Loss of consciousness.",
+    "vitals": {
+     "systolic_bp": 90.0,
+     "diastolic_bp": 60.0,
+     "pulse": 60.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.2,
+     "spo2": 96.0,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas1183",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 1183",
+     "age_years": 81,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Dyspnea.",
+    "vitals": {
+     "systolic_bp": 100.0,
+     "diastolic_bp": 60.0,
+     "pulse": 100.0,
+     "resp_rate": 24.0,
+     "temperature_c": 36.4,
+     "spo2": 94.0,
+     "consciousness": "P"
+    }
+   }
+  },
+  {
+   "id": "ktas1187",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 1187",
+     "age_years": 82,
+     "sex": "female",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Perm cath. malfunction.",
+    "vitals": {
+     "systolic_bp": 130.0,
+     "diastolic_bp": 60.0,
+     "pulse": 67.0,
+     "resp_rate": 18.0,
+     "temperature_c": 36.2,
+     "consciousness": "A"
+    }
+   }
+  },
+  {
+   "id": "ktas1204",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P3",
+   "nurse_priority": "P3",
+   "ktas_expert": 3,
+   "ktas_rn": 3,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 1204",
+     "age_years": 88,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Convulsion.",
+    "vitals": {
+     "systolic_bp": 150.0,
+     "diastolic_bp": 90.0,
+     "pulse": 95.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.2,
+     "spo2": 98.0,
+     "consciousness": "V"
+    }
+   }
+  },
+  {
+   "id": "ktas1213",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected_priority": "P4",
+   "nurse_priority": "P4",
+   "ktas_expert": 4,
+   "ktas_rn": 4,
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "files": [],
+   "case": {
+    "patient": {
+     "name": "KTAS 1213",
+     "age_years": 50,
+     "sex": "male",
+     "preferred_language": "en"
+    },
+    "consent_given": true,
+    "message": "Upper abdominal pain. Pain 3/10.",
+    "vitals": {
+     "systolic_bp": 120.0,
+     "diastolic_bp": 80.0,
+     "pulse": 84.0,
+     "resp_rate": 20.0,
+     "temperature_c": 36.4,
+     "spo2": 97.0,
+     "consciousness": "A"
+    }
+   }
+  }
+ ]
+}

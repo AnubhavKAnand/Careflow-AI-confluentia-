@@ -1,0 +1,381 @@
+# Deterministic red-flag rules.
+#
+# These rules can only RAISE a case's priority. Neither the language model nor (later) the
+# shadow agent can lower a priority set by a rule.
+#
+# Grammar (every present condition must hold):
+#   symptoms_all_of:  list of groups; each group is a list of canonical symptom ids; at least one per group must be present
+#   symptoms_any_of:  list of canonical symptom ids; at least one must be present
+#   vitals:           {vital: {lt|lte|gt|gte: number}}; ANY listed vital condition triggers
+#   demographics:     {age_max_years, age_min_years, pregnant: true}
+#
+# References are to the triage system whose discriminator the rule is adapted from.
+# These rules are a hackathon demonstration, not a validated clinical protocol.
+
+- id: cardiac_chest_pain
+  label: Chest pain with cardiac features
+  priority: P1
+  symptoms_all_of:
+    - [chest_pain]
+    - [sweating, breathlessness, arm_jaw_radiation, fainting, palpitations, vomiting, nausea]
+  rationale: Chest pain with sweating, breathlessness, radiation or collapse may indicate a heart attack.
+  reference: MTS 'Chest pain' (cardiac pain discriminator); ESI level 2
+
+- id: chest_pain
+  label: Chest pain
+  priority: P2
+  symptoms_any_of: [chest_pain]
+  rationale: Any new chest pain needs early clinician assessment to rule out a cardiac cause.
+  reference: MTS 'Chest pain'
+
+- id: stroke_fast
+  label: Possible stroke signs (FAST)
+  priority: P1
+  symptoms_any_of: [face_droop, slurred_speech, one_sided_weakness]
+
+
+- id: cardiac_arrest
+  label: Cardiac arrest or after resuscitation
+  priority: P1
+  symptoms_any_of: [cardiac_arrest]
+  rationale: Arrest or a post-resuscitation state needs immediate resuscitation-room care.
+  reference: ESI level 1; KTAS level 1
+
+- id: acvpu_unresponsive
+  label: Responds only to pain or unresponsive (ACVPU P/U)
+  priority: P1
+  vitals:
+    consciousness: {in: [P, U]}
+  rationale: A patient who responds only to pain or not at all needs immediate assessment of airway and breathing.
+  reference: ACVPU / NEWS2; ESI level 1; WHO ETAT 'coma'
+
+- id: acvpu_voice_or_confused
+  label: Responds only to voice or newly confused (ACVPU V/C)
+  priority: P2
+  vitals:
+    consciousness: {in: [V, C]}
+  rationale: Reduced responsiveness or new confusion scores 3 on NEWS2 and needs urgent review.
+  reference: ACVPU / NEWS2 (any single parameter scoring 3)
+
+- id: unresponsive
+  label: Unconscious or unresponsive
+  priority: P1
+  symptoms_any_of: [unconscious]
+  rationale: An unresponsive patient needs immediate assessment.
+  reference: ESI level 1; WHO ETAT 'coma'
+
+- id: seizure
+  label: Seizure / convulsion
+  priority: P1
+  symptoms_any_of: [seizure]
+  rationale: Ongoing or recent seizures need immediate assessment.
+  reference: WHO ETAT 'convulsing'; MTS 'Fits'
+
+- id: severe_breathing
+  label: Severe breathing difficulty
+  priority: P1
+  symptoms_all_of:
+    - [breathlessness]
+    - [lip_throat_swelling, unconscious, confusion, chest_pain, wheeze]
+  rationale: Breathlessness with airway swelling, wheeze, chest pain or altered consciousness may be life-threatening.
+  reference: WHO ETAT 'obstructed breathing / severe respiratory distress'
+
+- id: breathlessness
+  label: Breathlessness
+  priority: P2
+  symptoms_any_of: [breathlessness]
+  rationale: Breathing difficulty needs early assessment and oxygen saturation measurement.
+  reference: MTS 'Shortness of breath'
+
+- id: anaphylaxis
+  label: Possible severe allergic reaction
+  priority: P1
+  symptoms_any_of: [lip_throat_swelling]
+  rationale: Lip, tongue or throat swelling can progress to airway obstruction.
+  reference: MTS 'Allergy' (stridor / facial oedema); WHO ETAT
+
+- id: hypoxia_severe
+  label: Very low oxygen saturation (SpO2 < 90%)
+  priority: P1
+  vitals: {spo2: {lt: 90}}
+  rationale: SpO2 below 90% indicates significant hypoxia.
+  reference: NEWS2 SpO2 scale 1; MTS 'Very low SpO2'
+
+- id: hypoxia
+  label: Low oxygen saturation (SpO2 < 92%)
+  priority: P2
+  vitals: {spo2: {lt: 92}}
+  rationale: SpO2 of 91% or below scores 3 on NEWS2 (red score).
+  reference: NEWS2 SpO2 scale 1
+
+- id: shock_bp
+  label: Low blood pressure (systolic <= 90)
+  priority: P1
+  vitals: {systolic_bp: {lte: 90}}
+  rationale: Systolic BP of 90 mmHg or below may indicate shock.
+  reference: NEWS2 (score 3); qSOFA (systolic <= 100)
+
+- id: extreme_pulse
+  label: Extreme heart rate (> 130 or <= 40)
+  priority: P1
+  vitals: {pulse: {gt: 130}}
+  rationale: Heart rate above 130 scores 3 on NEWS2.
+  reference: NEWS2 pulse
+
+- id: bradycardia
+  label: Very slow heart rate (<= 40)
+  priority: P1
+  vitals: {pulse: {lte: 40}}
+  rationale: Heart rate of 40 or below scores 3 on NEWS2.
+  reference: NEWS2 pulse
+
+- id: resp_rate_extreme
+  label: Abnormal breathing rate (>= 25 or <= 8)
+  priority: P1
+  vitals: {resp_rate: {gte: 25}}
+  rationale: Respiratory rate of 25 or more scores 3 on NEWS2.
+  reference: NEWS2 respiratory rate
+
+- id: resp_rate_low
+  label: Very slow breathing (<= 8)
+  priority: P1
+  vitals: {resp_rate: {lte: 8}}
+  rationale: Respiratory rate of 8 or below scores 3 on NEWS2.
+  reference: NEWS2 respiratory rate
+
+- id: hyperpyrexia
+  label: Very high temperature (>= 40 C)
+  priority: P2
+  vitals: {temperature_c: {gte: 40}}
+  rationale: Temperature of 40 C or above needs urgent assessment.
+  reference: MTS 'Very hot' discriminator
+
+- id: meningitis_signs
+  label: Fever with neck stiffness, rash or confusion
+  priority: P1
+  symptoms_all_of:
+    - [fever]
+    - [neck_stiffness, rash, confusion, seizure]
+  rationale: Fever with neck stiffness, non-blanching rash or confusion may indicate meningitis or sepsis.
+  reference: MTS 'Non-blanching rash' / 'Meningism'; NICE sepsis red flags
+
+- id: sudden_severe_headache
+  label: Sudden severe ('worst ever') headache
+  priority: P1
+  symptoms_any_of: [severe_headache]
+  rationale: A sudden, worst-ever headache may indicate bleeding in the brain.
+  reference: MTS 'Headache' (sudden onset)
+
+- id: suicidal_risk
+  label: Suicidal thoughts or self-harm
+  priority: P1
+  symptoms_any_of: [suicidal_thoughts]
+  rationale: Expressed suicidal intent or self-harm requires immediate human attention.
+  reference: MTS 'Mental illness' (high risk of self-harm)
+
+- id: snake_bite
+  label: Snake bite
+  priority: P1
+  symptoms_any_of: [snake_bite]
+  rationale: Snake bite is a time-critical emergency in India; anti-venom must not be delayed.
+  reference: National Snakebite Management Protocol (India, MoHFW)
+
+- id: poisoning
+  label: Poisoning or overdose
+  priority: P1
+  symptoms_any_of: [poisoning]
+  rationale: Pesticide poisoning and overdose are common, time-critical emergencies in India.
+  reference: MTS 'Overdose and poisoning'
+
+- id: heavy_bleeding
+  label: Heavy or uncontrolled bleeding
+  priority: P1
+  symptoms_any_of: [heavy_bleeding, vomiting_blood, coughing_blood]
+  rationale: Heavy bleeding, vomiting blood or coughing blood may cause rapid deterioration.
+  reference: MTS 'Exsanguinating haemorrhage' / 'Haematemesis'
+
+- id: gi_bleed
+  label: Blood in stool / black stool
+  priority: P2
+  symptoms_any_of: [blood_in_stool]
+  rationale: Black or bloody stools may indicate gastrointestinal bleeding.
+  reference: MTS 'GI bleeding'
+
+- id: pregnancy_danger
+  label: Pregnancy danger sign
+  priority: P1
+  demographics: {pregnant: true}
+  symptoms_any_of: [vaginal_bleeding, bleeding, heavy_bleeding, seizure, severe_headache, abdominal_pain, reduced_fetal_movement, fainting]
+  rationale: Bleeding, fits, severe headache, abdominal pain or reduced fetal movement in pregnancy are obstetric danger signs.
+  reference: WHO / MoHFW antenatal danger signs
+
+- id: infant_fever
+  label: Fever in an infant under 3 months
+  priority: P1
+  demographics: {age_max_years: 0}
+  symptoms_any_of: [fever]
+  rationale: Fever in young infants can indicate serious infection.
+  reference: "NICE fever in under 5s (red: age < 3 months, temp >= 38 C); WHO IMCI"
+
+- id: child_danger_signs
+  label: Child danger sign (not feeding, lethargic, severe dehydration)
+  priority: P1
+  demographics: {age_max_years: 5}
+  symptoms_any_of: [not_feeding, severe_dehydration, unconscious, seizure]
+  rationale: Inability to feed, lethargy, fits or severe dehydration are IMCI general danger signs.
+  reference: WHO IMCI general danger signs
+
+- id: dengue_warning
+  label: Fever with bleeding or persistent vomiting (dengue warning signs)
+  priority: P2
+  symptoms_all_of:
+    - [fever]
+    - [bleeding_gums, bleeding, vomiting, abdominal_pain]
+  rationale: Fever with bleeding, abdominal pain or persistent vomiting are dengue warning signs.
+  reference: WHO 2009 dengue warning signs; NVBDCP guidelines
+
+- id: confusion
+  label: New confusion or drowsiness
+  priority: P2
+  symptoms_any_of: [confusion]
+  rationale: New confusion can indicate sepsis, stroke, low sugar or other serious illness.
+  reference: NEWS2 (new confusion scores 3); qSOFA
+
+- id: head_injury
+  label: Head injury
+  priority: P2
+  symptoms_any_of: [head_injury]
+  rationale: Head injuries need assessment for consciousness changes and bleeding.
+  reference: MTS 'Head injury'
+
+- id: fainting
+  label: Fainting / collapse
+  priority: P2
+  symptoms_any_of: [fainting]
+  rationale: Collapse may have a cardiac or other serious cause.
+  reference: MTS 'Collapsed adult'
+
+- id: animal_bite
+  label: Animal bite (rabies risk)
+  priority: P3
+  symptoms_any_of: [dog_bite]
+  rationale: Animal bites need wound care and same-day rabies post-exposure prophylaxis assessment.
+  reference: National Guidelines for Rabies Prophylaxis (India, NCDC)
+
+- id: burns
+  label: Burns
+  priority: P2
+  symptoms_any_of: [burns]
+  rationale: Burns need early assessment of extent, airway involvement and pain.
+  reference: MTS 'Burns and scalds'
+
+# ---------------------------------------------------------------- Phase 2: critical lab values
+# labs: {lab_id: {lt|lte|gt|gte|eq: value}}; ANY listed condition triggers.
+# Thresholds follow commonly used laboratory critical-value lists; adjust to the local lab's policy.
+
+- id: critical_platelets
+  label: Critically low platelets (< 20,000/µL)
+  priority: P1
+  labs: {platelets: {lt: 20000}}
+  rationale: Platelets below 20,000 carry a high bleeding risk (e.g. severe dengue).
+  reference: Common lab critical values; WHO dengue guidance
+
+- id: low_platelets
+  label: Low platelets (< 50,000/µL)
+  priority: P2
+  labs: {platelets: {lt: 50000}}
+  rationale: Platelets below 50,000 need same-day review, especially with fever or bleeding.
+  reference: WHO 2009 dengue guidance; common lab critical values
+
+- id: severe_anaemia
+  label: Severe anaemia (Hb < 7 g/dL)
+  priority: P2
+  labs: {hemoglobin: {lt: 7}}
+  rationale: Haemoglobin below 7 g/dL may need urgent transfusion assessment.
+  reference: WHO anaemia severity thresholds
+
+- id: critical_anaemia
+  label: Critical anaemia (Hb < 5 g/dL)
+  priority: P1
+  labs: {hemoglobin: {lt: 5}}
+  rationale: Haemoglobin below 5 g/dL is life-threatening.
+  reference: Common lab critical values
+
+- id: hypoglycaemia
+  label: Low blood glucose (< 54 mg/dL)
+  priority: P1
+  labs: {glucose: {lt: 54}}
+  rationale: Glucose below 54 mg/dL is clinically significant hypoglycaemia.
+  reference: ADA level 2 hypoglycaemia
+
+- id: hyperglycaemia
+  label: Very high blood glucose (> 400 mg/dL)
+  priority: P2
+  labs: {glucose: {gt: 400}}
+  rationale: Glucose above 400 mg/dL may indicate DKA or a hyperosmolar state.
+  reference: Common lab critical values
+
+- id: hyperkalaemia
+  label: High potassium (>= 6.0 mmol/L)
+  priority: P1
+  labs: {potassium: {gte: 6.0}}
+  rationale: Potassium of 6.0 or above can cause dangerous heart rhythms.
+  reference: Common lab critical values
+
+- id: hypokalaemia
+  label: Very low potassium (< 2.5 mmol/L)
+  priority: P2
+  labs: {potassium: {lt: 2.5}}
+  rationale: Potassium below 2.5 can cause weakness and arrhythmia.
+  reference: Common lab critical values
+
+- id: hyponatraemia
+  label: Low sodium (< 125 mmol/L)
+  priority: P2
+  labs: {sodium: {lt: 125}}
+  rationale: Sodium below 125 can cause confusion and seizures.
+  reference: Common lab critical values
+
+- id: high_creatinine
+  label: High creatinine (> 4 mg/dL)
+  priority: P2
+  labs: {creatinine: {gt: 4}}
+  rationale: Markedly raised creatinine may indicate acute kidney injury.
+  reference: KDIGO AKI criteria (indicative)
+
+- id: wbc_extreme
+  label: Very high or very low white cell count
+  priority: P2
+  labs: {wbc: {gt: 25000}}
+  rationale: White cell count above 25,000 may indicate serious infection.
+  reference: Common lab critical values
+
+- id: wbc_low
+  label: Very low white cell count (< 2,000/µL)
+  priority: P2
+  labs: {wbc: {lt: 2000}}
+  rationale: White cell count below 2,000 raises infection risk.
+  reference: Common lab critical values
+
+- id: troponin_positive
+  label: Positive troponin
+  priority: P1
+  labs: {troponin: {eq: positive}}
+  rationale: A positive troponin indicates heart muscle injury.
+  reference: Fourth Universal Definition of Myocardial Infarction
+
+- id: palpitations_unstable
+  label: Palpitations with fainting, dizziness or breathlessness
+  priority: P2
+  symptoms_all_of:
+    - [palpitations]
+    - [fainting, dizziness, breathlessness]
+  rationale: A fast or irregular heartbeat with (near) fainting or breathlessness may be an unstable arrhythmia.
+  reference: "MTS 'Palpitations' (abnormal pulse, history of syncope)"
+
+- id: palpitations
+  label: Palpitations
+  priority: P3
+  symptoms_any_of: [palpitations]
+  rationale: New palpitations need a pulse and ECG check the same day.
+  reference: "MTS 'Palpitations'"

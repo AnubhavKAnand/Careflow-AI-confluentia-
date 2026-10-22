@@ -1,0 +1,288 @@
+# Missing-information checklists and the follow-up question bank.
+#
+# A checklist applies when its `applies` condition holds. Each item is checked against the
+# extraction; a failed check becomes a "missing" flag and a follow-up question.
+#
+# applies:   always | {symptoms_any: [...], red_flags_any: [...], sex, age_min, age_max, pregnant: true}
+# check:     field: <path>            value present (e.g. age_years, vitals.spo2, pregnancy_status)
+#            list: <name>             non-empty list (allergies, medications, medical_history)
+#            chief_onset: true        main complaint has onset/duration, or the timeline is non-empty
+#            symptom_known: [ids]     each id was either reported OR explicitly denied
+#            history_any: [words]     a history/medication entry mentions one of these words
+#            vitals_all: [names]      all of these vitals present
+#            vitals_any: true         at least one vital sign present
+#            labs_known: [ids]        any of these labs present
+#            time_mentioned: true     a clock time or "X hours ago" style time appears in the text
+# priority:  critical (could change the triage decision) | important | nice
+# target:    patient (ask the patient) | staff (measure / verify at the desk)
+# symptom:   optional canonical symptom id; lets a yes/no answer become a reported/denied symptom
+#
+# Questions are information-gathering only. They never suggest a diagnosis or treatment.
+
+questions:
+  onset:
+    en: When did this problem start, and is it getting better, worse, or staying the same?
+    hi_latn: Yeh takleef kab se hai, aur kya yeh badh rahi hai, kam ho rahi hai, ya waisi hi hai?
+    hi: यह तकलीफ़ कब से है, और क्या यह बढ़ रही है, कम हो रही है, या वैसी ही है?
+  age:
+    en: How old is the patient?
+    hi_latn: Mareez ki umar kitni hai?
+    hi: मरीज़ की उम्र कितनी है?
+  allergies:
+    en: Is the patient allergic to any medicine or food?
+    hi_latn: Kya kisi dawai ya khane se allergy hai?
+    hi: क्या किसी दवा या खाने से एलर्जी है?
+  medications:
+    en: Which medicines is the patient taking at the moment?
+    hi_latn: Abhi kaun-kaun si dawaiyan le rahe hain?
+    hi: अभी कौन-कौन सी दवाइयाँ ले रहे हैं?
+  pregnancy:
+    en: Is there any chance the patient is pregnant? When was the last menstrual period?
+    hi_latn: Kya pregnancy ki koi sambhavna hai? Aakhri period kab aaya tha?
+    hi: क्या गर्भावस्था की कोई संभावना है? आख़िरी माहवारी कब आई थी?
+  measure_vitals:
+    en: "Please record SpO2, pulse, temperature, blood pressure and breathing rate."
+  measure_cardiac_vitals:
+    en: "Please record pulse, blood pressure and SpO2 now."
+  measure_resp_vitals:
+    en: "Please record SpO2 and breathing rate now."
+  measure_temperature:
+    en: "Please record the patient's temperature."
+  measure_glucose:
+    en: "Please check blood glucose (finger-prick) and blood pressure."
+  measure_bp:
+    en: "Please record blood pressure."
+  cp_radiation:
+    en: Does the chest pain spread to the arm, jaw, neck or back?
+    hi_latn: Kya seene ka dard haath, jabde, gardan ya peeth tak jaata hai?
+    hi: क्या सीने का दर्द हाथ, जबड़े, गर्दन या पीठ तक जाता है?
+  cp_sweating:
+    en: Is there sweating with the pain?
+    hi_latn: Kya dard ke saath pasina aa raha hai?
+    hi: क्या दर्द के साथ पसीना आ रहा है?
+  breathless:
+    en: Is there any difficulty in breathing?
+    hi_latn: Kya saans lene mein takleef hai?
+    hi: क्या साँस लेने में तकलीफ़ है?
+  cardiac_history:
+    en: Does the patient have heart disease, diabetes, high blood pressure, or a past stroke?
+    hi_latn: Kya dil ki bimari, sugar, BP ya pehle kabhi lakwa hua hai?
+    hi: क्या दिल की बीमारी, शुगर, बीपी या पहले कभी लकवा हुआ है?
+  resp_history:
+    en: Does the patient have asthma, COPD, TB or any lung disease?
+    hi_latn: Kya asthma, dama, TB ya phephdon ki koi bimari hai?
+    hi: क्या अस्थमा, दमा, टीबी या फेफड़ों की कोई बीमारी है?
+  chest_pain_q:
+    en: Is there any chest pain?
+    hi_latn: Kya seene mein dard hai?
+    hi: क्या सीने में दर्द है?
+  fever_q:
+    en: Is there fever?
+    hi_latn: Kya bukhar hai?
+    hi: क्या बुख़ार है?
+  rash_bleeding:
+    en: Is there any rash, or bleeding from the gums, nose, or in urine or stool?
+    hi_latn: Kya shareer par daane hain, ya masoodon, naak, peshab ya latrine mein khoon aa raha hai?
+    hi: क्या शरीर पर दाने हैं, या मसूड़ों, नाक, पेशाब या लैट्रिन में ख़ून आ रहा है?
+  neck_stiffness_q:
+    en: Is there neck stiffness or difficulty bending the head forward?
+    hi_latn: Kya gardan akad gayi hai ya sir aage jhukane mein dikkat hai?
+    hi: क्या गर्दन अकड़ गई है या सिर आगे झुकाने में दिक़्क़त है?
+  vomiting_q:
+    en: Is there vomiting? How many times today?
+    hi_latn: Kya ulti ho rahi hai? Aaj kitni baar hui?
+    hi: क्या उल्टी हो रही है? आज कितनी बार हुई?
+  travel_q:
+    en: Has the patient travelled recently or been in an area with malaria or dengue cases?
+    hi_latn: Kya haal mein kahin safar kiya hai, ya aas-paas malaria ya dengue ke case hain?
+    hi: क्या हाल में कहीं सफ़र किया है, या आस-पास मलेरिया या डेंगू के केस हैं?
+  headache_sudden:
+    en: Did the headache start suddenly, like the worst headache ever?
+    hi_latn: Kya sir dard achanak shuru hua, ab tak ka sabse tez dard?
+    hi: क्या सिर दर्द अचानक शुरू हुआ, अब तक का सबसे तेज़ दर्द?
+  weakness_speech:
+    en: Any weakness on one side of the body, face drooping, or difficulty speaking?
+    hi_latn: Kya shareer ke ek taraf kamzori, muh tedha hona, ya bolne mein dikkat hai?
+    hi: क्या शरीर के एक तरफ़ कमज़ोरी, मुँह टेढ़ा होना, या बोलने में दिक़्क़त है?
+  last_known_well:
+    en: At what exact time was the patient last seen completely normal?
+    hi_latn: Mareez ko aakhri baar bilkul theek kis samay dekha gaya tha?
+    hi: मरीज़ को आख़िरी बार बिल्कुल ठीक किस समय देखा गया था?
+  abd_location:
+    en: Where exactly is the stomach pain (upper, lower, right, left, all over)?
+    hi_latn: Pet mein dard theek kahan hai (upar, neeche, daayen, baayen, poore pet mein)?
+    hi: पेट में दर्द ठीक कहाँ है (ऊपर, नीचे, दाएँ, बाएँ, पूरे पेट में)?
+  blood_stool:
+    en: Is there blood in the stool, or black stool?
+    hi_latn: Kya latrine mein khoon ya kaali latrine aa rahi hai?
+    hi: क्या लैट्रिन में ख़ून या काली लैट्रिन आ रही है?
+  gestation:
+    en: How many weeks or months pregnant is the patient?
+    hi_latn: Pregnancy ka kaunsa mahina ya hafta chal raha hai?
+    hi: गर्भावस्था का कौन-सा महीना या हफ़्ता चल रहा है?
+  preg_bleeding:
+    en: Is there any bleeding or fluid leaking from the vagina?
+    hi_latn: Kya yoni se khoon ya paani aa raha hai?
+    hi: क्या योनि से ख़ून या पानी आ रहा है?
+  fetal_movement:
+    en: Is the baby moving as usual?
+    hi_latn: Kya bachcha pehle ki tarah hil raha hai?
+    hi: क्या बच्चा पहले की तरह हिल रहा है?
+  child_feeding:
+    en: Is the child feeding or drinking normally?
+    hi_latn: Kya bachcha theek se doodh pee raha hai ya pani pee raha hai?
+    hi: क्या बच्चा ठीक से दूध या पानी पी रहा है?
+  child_urine:
+    en: When did the child last pass urine?
+    hi_latn: Bachche ne aakhri baar peshab kab kiya tha?
+    hi: बच्चे ने आख़िरी बार पेशाब कब किया था?
+  child_activity:
+    en: Is the child active and alert, or unusually sleepy or floppy?
+    hi_latn: Kya bachcha chust hai, ya zyada sust aur neend mein hai?
+    hi: क्या बच्चा चुस्त है, या ज़्यादा सुस्त और नींद में है?
+  bite_time:
+    en: At what time did the bite happen?
+    hi_latn: Kaata kis samay tha?
+    hi: काटा किस समय था?
+  snake_signs:
+    en: Is there swelling, bleeding, drooping eyelids, or difficulty swallowing or breathing?
+    hi_latn: Kya sujan, khoon behna, palkein jhukna, ya nigalne ya saans lene mein dikkat hai?
+    hi: क्या सूजन, ख़ून बहना, पलकें झुकना, या निगलने या साँस लेने में दिक़्क़त है?
+  poison_what:
+    en: What was taken, how much, and at what time? Please bring the bottle or packet.
+    hi_latn: Kya khaya ya piya, kitna, aur kis samay? Bottle ya packet saath laayen.
+    hi: क्या खाया या पिया, कितना, और किस समय? बोतल या पैकेट साथ लाएँ।
+  rabies_vaccine:
+    en: Has the patient had rabies vaccine before? Where is the bite and is it bleeding?
+    hi_latn: Kya pehle rabies ka teeka laga hai? Kaata kahan hai aur kya khoon nikla?
+    hi: क्या पहले रेबीज़ का टीका लगा है? काटा कहाँ है और क्या ख़ून निकला?
+  urine_output:
+    en: Is the patient passing urine normally today?
+    hi_latn: Kya aaj peshab theek se aa raha hai?
+    hi: क्या आज पेशाब ठीक से आ रहा है?
+  dengue_warning_q:
+    en: Is there stomach pain, repeated vomiting, or bleeding from anywhere?
+    hi_latn: Kya pet dard, baar-baar ulti, ya kahin se khoon aa raha hai?
+    hi: क्या पेट दर्द, बार-बार उल्टी, या कहीं से ख़ून आ रहा है?
+  suicide_safety:
+    en: "Is the patient safe right now and is someone with them? Do not leave them alone."
+  diabetes_meds:
+    en: Does the patient take insulin or sugar tablets? Have they eaten today?
+    hi_latn: Kya insulin ya sugar ki goli lete hain? Aaj kuch khaya hai?
+    hi: क्या इंसुलिन या शुगर की गोली लेते हैं? आज कुछ खाया है?
+
+checklists:
+  general:
+    applies: always
+    items:
+      - {id: onset, label: Onset / duration of main complaint, check: {chief_onset: true}, priority: important, target: patient, question: onset}
+      - {id: age, label: Age, check: {field: age_years}, priority: important, target: patient, question: age}
+      - {id: allergies, label: Allergies, check: {list: allergies}, priority: nice, target: patient, question: allergies}
+      - {id: medications, label: Current medicines, check: {list: medications}, priority: nice, target: patient, question: medications}
+      - {id: vitals, label: Vital signs, check: {vitals_any: true}, priority: important, target: staff, question: measure_vitals}
+      - id: pregnancy
+        label: Pregnancy status
+        applies: {sex: female, age_min: 12, age_max: 50}
+        check: {field: pregnancy_status}
+        priority: important
+        target: patient
+        question: pregnancy
+
+  chest_pain:
+    applies: {symptoms_any: [chest_pain]}
+    items:
+      - {id: cp_vitals, label: Pulse / BP / SpO2, check: {vitals_all: [pulse, systolic_bp, spo2]}, priority: critical, target: staff, question: measure_cardiac_vitals}
+      - {id: cp_radiation, label: Pain radiation, check: {symptom_known: [arm_jaw_radiation]}, priority: important, target: patient, question: cp_radiation, symptom: arm_jaw_radiation}
+      - {id: cp_sweating, label: Sweating, check: {symptom_known: [sweating]}, priority: important, target: patient, question: cp_sweating, symptom: sweating}
+      - {id: cp_breath, label: Breathlessness, check: {symptom_known: [breathlessness]}, priority: important, target: patient, question: breathless, symptom: breathlessness}
+      - id: cp_history
+        label: Cardiac risk history
+        check: {history_any: [heart, cardiac, angina, diabetes, sugar, bp, hypertension, stroke, attack, insulin, metformin, aspirin, statin]}
+        priority: important
+        target: patient
+        question: cardiac_history
+
+  breathlessness:
+    applies: {symptoms_any: [breathlessness, wheeze]}
+    items:
+      - {id: br_vitals, label: SpO2 / breathing rate, check: {vitals_all: [spo2, resp_rate]}, priority: critical, target: staff, question: measure_resp_vitals}
+      - {id: br_chest_pain, label: Chest pain, check: {symptom_known: [chest_pain]}, priority: important, target: patient, question: chest_pain_q, symptom: chest_pain}
+      - {id: br_fever, label: Fever, check: {symptom_known: [fever]}, priority: important, target: patient, question: fever_q, symptom: fever}
+      - {id: br_history, label: Lung disease history, check: {history_any: [asthma, copd, dama, tb, tuberculosis, lung, inhaler]}, priority: nice, target: patient, question: resp_history}
+
+  fever:
+    applies: {symptoms_any: [fever]}
+    items:
+      - {id: fv_temp, label: Measured temperature, check: {field: vitals.temperature_c}, priority: important, target: staff, question: measure_temperature}
+      - {id: fv_rash_bleed, label: Rash / bleeding, check: {symptom_known: [rash, bleeding_gums, bleeding, blood_in_stool]}, priority: important, target: patient, question: rash_bleeding, symptom: bleeding_gums}
+      - {id: fv_neck, label: Neck stiffness, check: {symptom_known: [neck_stiffness]}, priority: important, target: patient, question: neck_stiffness_q, symptom: neck_stiffness}
+      - {id: fv_vomit, label: Vomiting, check: {symptom_known: [vomiting]}, priority: nice, target: patient, question: vomiting_q, symptom: vomiting}
+      - {id: fv_travel, label: Travel / local outbreaks, check: {history_any: [travel, malaria, dengue, outbreak, safar]}, priority: nice, target: patient, question: travel_q}
+
+  headache:
+    applies: {symptoms_any: [headache, severe_headache]}
+    items:
+      - {id: ha_sudden, label: Sudden onset, check: {symptom_known: [severe_headache]}, priority: critical, target: patient, question: headache_sudden, symptom: severe_headache}
+      - {id: ha_neuro, label: One-sided weakness / speech, check: {symptom_known: [one_sided_weakness, slurred_speech, face_droop]}, priority: important, target: patient, question: weakness_speech, symptom: one_sided_weakness}
+      - {id: ha_neck, label: Neck stiffness, check: {symptom_known: [neck_stiffness]}, priority: important, target: patient, question: neck_stiffness_q, symptom: neck_stiffness}
+      - {id: ha_bp, label: Blood pressure, check: {field: vitals.systolic_bp}, priority: important, target: staff, question: measure_bp}
+
+  stroke:
+    applies: {symptoms_any: [face_droop, slurred_speech, one_sided_weakness]}
+    items:
+      - {id: st_lkw, label: Time last seen normal, check: {time_mentioned: true}, priority: critical, target: patient, question: last_known_well}
+      - {id: st_glucose, label: Blood glucose / BP, check: {labs_known: [glucose]}, priority: critical, target: staff, question: measure_glucose}
+
+  abdominal:
+    applies: {symptoms_any: [abdominal_pain]}
+    items:
+      - {id: ab_location, label: Pain location, check: {abdominal_site: true}, priority: important, target: patient, question: abd_location}
+      - {id: ab_vomit, label: Vomiting, check: {symptom_known: [vomiting, vomiting_blood]}, priority: important, target: patient, question: vomiting_q, symptom: vomiting}
+      - {id: ab_blood_stool, label: Blood in stool, check: {symptom_known: [blood_in_stool]}, priority: important, target: patient, question: blood_stool, symptom: blood_in_stool}
+
+  pregnancy:
+    applies: {pregnant: true}
+    items:
+      - {id: pg_gestation, label: Gestational age, check: {gestation: true}, priority: important, target: patient, question: gestation}
+      - {id: pg_bleeding, label: Vaginal bleeding / leaking, check: {symptom_known: [vaginal_bleeding, bleeding, heavy_bleeding]}, priority: critical, target: patient, question: preg_bleeding, symptom: vaginal_bleeding}
+      - {id: pg_fetal, label: Fetal movement, check: {symptom_known: [reduced_fetal_movement]}, priority: important, target: patient, question: fetal_movement, symptom: reduced_fetal_movement}
+      - {id: pg_bp, label: Blood pressure, check: {field: vitals.systolic_bp}, priority: critical, target: staff, question: measure_bp}
+
+  young_child:
+    applies: {age_max: 5}
+    items:
+      - {id: ch_feeding, label: Feeding / drinking, check: {symptom_known: [not_feeding]}, priority: critical, target: patient, question: child_feeding, symptom: not_feeding}
+      - {id: ch_urine, label: Urine output, check: {symptom_known: [severe_dehydration]}, priority: important, target: patient, question: child_urine, symptom: severe_dehydration}
+      - {id: ch_activity, label: Activity / alertness, check: {field: vitals.consciousness}, priority: critical, target: patient, question: child_activity}
+
+  snake_bite:
+    applies: {symptoms_any: [snake_bite]}
+    items:
+      - {id: sb_time, label: Time of bite, check: {time_mentioned: true}, priority: critical, target: patient, question: bite_time}
+      - {id: sb_signs, label: Local / systemic signs, check: {symptom_known: [bleeding, breathlessness, lip_throat_swelling]}, priority: critical, target: patient, question: snake_signs}
+
+  poisoning:
+    applies: {symptoms_any: [poisoning]}
+    items:
+      - {id: po_what, label: Substance, amount and time, check: {time_mentioned: true}, priority: critical, target: patient, question: poison_what}
+
+  animal_bite:
+    applies: {symptoms_any: [dog_bite]}
+    items:
+      - {id: db_vaccine, label: Rabies vaccination history / wound, check: {history_any: [rabies, vaccine, teeka, arv]}, priority: important, target: patient, question: rabies_vaccine}
+
+  suicidal:
+    applies: {symptoms_any: [suicidal_thoughts]}
+    items:
+      - {id: su_safety, label: Immediate safety, check: {never: true}, priority: critical, target: staff, question: suicide_safety}
+
+  low_platelets:
+    applies: {red_flags_any: [critical_platelets, low_platelets, dengue_warning]}
+    items:
+      - {id: dg_warning, label: Dengue warning signs, check: {symptom_known: [abdominal_pain, vomiting, bleeding_gums, bleeding]}, priority: critical, target: patient, question: dengue_warning_q}
+      - {id: dg_urine, label: Urine output, check: {symptom_known: [severe_dehydration]}, priority: important, target: patient, question: urine_output, symptom: severe_dehydration}
+
+  low_glucose:
+    applies: {red_flags_any: [hypoglycaemia, hyperglycaemia]}
+    items:
+      - {id: gl_meds, label: Diabetes medicines / last meal, check: {history_any: [insulin, metformin, glimepiride, gliclazide, sugar ki goli, diabetes tablet]}, priority: important, target: patient, question: diabetes_meds}

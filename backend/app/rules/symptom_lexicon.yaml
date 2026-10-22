@@ -1,0 +1,204 @@
+# Canonical symptoms with English, Hinglish (romanised Hindi) and Hindi (Devanagari) synonyms.
+# Used for:
+#   1. mapping model output ("shortness of breath") to one canonical id ("breathlessness")
+#   2. a deterministic scan of the raw patient text, so a red flag is caught even if the model misses it
+# Matching is case-insensitive, word-bounded for Latin script, and negation-aware.
+# Extend freely; keep synonyms specific (avoid words that also mean something harmless).
+
+chest_pain:
+  label: Chest pain
+  synonyms: ["pain, chest", chest pain nos, chest tightness, tight chest, chest pressure, छातीत दुखत, छातीत दुखणे, chest pain, chest tightness, pain in chest, pain in my chest, chest discomfort, chest heaviness, pressure in chest,
+             seene mein dard, seene me dard, sine me dard, seena dard, chhati mein dard, chhati me dard, chest me dard, chest mein dard,
+             सीने में दर्द, छाती में दर्द, सीने में भारीपन]
+sweating:
+  label: Sweating
+  synonyms: [clammy, cold and clammy, sweaty and clammy, घाम येत, घाम, sweating, sweaty, diaphoresis, cold sweat, pasina, paseena, pasina aa raha, पसीना]
+breathlessness:
+  label: Breathlessness
+  synonyms: [dyspnea, dyspnoea, breathless, breathlessness, saans phoolti, saans phool rahi, saans phool raha, saans phulna, shortness of breath, short of breath, difficulty breathing, trouble breathing, cant breathe,
+             can't breathe, cannot breathe, breathing difficulty, gasping, saans phool, saans phoolna, saans lene mein takleef,
+             saans lene me takleef, saans lene mein dikkat, saans nahi aa rahi, sans phool, saans ki takleef,
+             सांस फूलना, सांस लेने में तकलीफ, सांस नहीं आ रही]
+arm_jaw_radiation:
+  label: Pain radiating to arm/jaw
+  synonyms: [left arm pain, pain in left arm, radiating to arm, radiating to left arm, radiating to jaw, jaw pain, pain going to arm,
+             baayen haath mein dard, left haath mein dard, haath tak dard, jabde mein dard, बाएं हाथ में दर्द]
+palpitations:
+  label: Palpitations
+  synonyms: [tachycardia, palpitations, heart racing, heart pounding, fast heartbeat, dhadkan tez, dil ki dhadkan tez, धड़कन तेज]
+fainting:
+  label: Fainting / collapse
+  synonyms: [presyncope, loss of consciousness, fainted, fainting, passed out, collapsed, collapse, syncope, blackout, gir pada, gir padi, behoshi ka daura]
+unconscious:
+  label: Unconscious / unresponsive
+  synonyms: [unarousable, comatose, coma, unconscious, unresponsive, not responding, not waking up, behosh, बेहोश, hosh nahi]
+seizure:
+  label: Seizure / fits
+  synonyms: [seizure, seizures, convulsion, convulsions, fits, fitting, daura pada, mirgi, jhatke, दौरा, मिर्गी]
+confusion:
+  label: Confusion / altered mental state
+  synonyms: [mental change, mental changes, altered mental change, mental status change, change in mental status, decreased mentality, altered mental status, altered mentality, disorientation, confused, confusion, disoriented, not making sense, drowsy, very sleepy, altered sensorium, ajeeb baatein, hosh mein nahi,
+             भ्रम]
+face_droop:
+  label: Face drooping
+  synonyms: [face drooping, facial droop, face droop, mouth deviated, mouth drooping, muh tedha, munh tedha, chehra tedha, मुंह टेढ़ा]
+slurred_speech:
+  label: Slurred speech
+  synonyms: [dysarthria, aphasia, speech became slurred, speech is slurred, slurring words, slurred speech, slurring, difficulty speaking, cannot speak, can't speak, speech unclear, bolne mein dikkat,
+             bolne me dikkat, zubaan ladkhada, आवाज़ लड़खड़ा, बोलने में दिक्कत]
+one_sided_weakness:
+  label: One-sided weakness / numbness
+  synonyms: [hemiparesis, hemiplegia, motor weakness, arm weakness, weak arm, arm is weak, arm became weak, leg weakness, weakness in arm, weakness in leg, haath mein kamzori, one sided weakness, weakness on one side, one side weakness, left side weakness, right side weakness, numbness on one side,
+             cannot move arm, can't move arm, cannot move leg, hemiplegia, ek taraf kamzori, aadha sharir, ek side kamzori, एक तरफ कमजोरी]
+severe_headache:
+  label: Sudden severe headache
+  synonyms: [worst headache, sudden severe headache, thunderclap headache, worst headache of my life, bahut tez sir dard achanak]
+headache:
+  label: Headache
+  synonyms: [cephalgia, headache, head ache, sir dard, sar dard, sir mein dard, sar mein dard, सिर दर्द, सिर में दर्द]
+neck_stiffness:
+  label: Neck stiffness
+  synonyms: [stiff neck, neck stiffness, neck is stiff, gardan akad, gardan mein akdan, गर्दन अकड़]
+fever:
+  label: Fever
+  synonyms: [febrile, fever, feverish, high temperature, bukhar, bukhaar, tez bukhar, taap, बुखार]
+rash:
+  label: Rash
+  synonyms: [rash, rashes, red spots, skin spots, daane, chakatte, लाल दाने]
+bleeding:
+  label: Bleeding
+  synonyms: [epistaxis, nasal bleeding, nose bleeding, nosebleed, bleeding, blood loss, khoon beh, khoon nikal, खून बह]
+heavy_bleeding:
+  label: Heavy / uncontrolled bleeding
+  synonyms: [heavy bleeding, bleeding heavily, bleeding a lot, won't stop bleeding, uncontrolled bleeding, bahut khoon, khoon ruk nahi raha,
+             बहुत खून]
+vomiting_blood:
+  label: Vomiting blood
+  synonyms: [vomiting blood, blood in vomit, vomited blood, haematemesis, hematemesis, khoon ki ulti, ulti mein khoon, खून की उल्टी]
+blood_in_stool:
+  label: Blood in stool / black stool
+  synonyms: [blood in stool, blood in stools, bloody stool, bloody stools, black stool, black stools, black tarry stool, black tarry stools, malena, melena, latrine mein khoon, potty mein khoon]
+bleeding_gums:
+  label: Bleeding gums / nose
+  synonyms: [bleeding gums, gum bleeding, nose bleed, nosebleed, masoodon se khoon, naak se khoon, मसूड़ों से खून, नाक से खून]
+vomiting:
+  label: Vomiting
+  synonyms: [emesis, vomiting, vomit, vomited, throwing up, ulti, ultiyan, उल्टी]
+diarrhoea:
+  label: Diarrhoea
+  synonyms: [diarrhoea, diarrhea, loose motion, loose motions, loose stools, dast, दस्त]
+abdominal_pain:
+  label: Abdominal pain
+  synonyms: [abd pain, abd. pain, abdomen pain, "pain, abdominal", "pain, abdomen", lower abdominal pain, epigastric pain, flank pain, abdominal pain, stomach pain, stomach ache, tummy pain, belly pain, pain in abdomen, pet dard, pet mein dard, pet me dard,
+             पेट दर्द, पेट में दर्द]
+lip_throat_swelling:
+  label: Lip / face / throat swelling
+  synonyms: [swollen lips, lips swollen, lip swelling, throat swelling, throat closing, tongue swelling, face swelling, swollen face,
+             honth sooj, honth suj, gala sooj, chehra sooj, होंठ सूज]
+wheeze:
+  label: Wheeze
+  synonyms: [wheeze, wheezing, seeti ki awaz, सीटी की आवाज़]
+cough:
+  label: Cough
+  synonyms: [cough, coughing, khansi, khaansi, खांसी]
+coughing_blood:
+  label: Coughing blood
+  synonyms: [coughing up blood, cough with blood, blood when coughing, khoon wali khansi, coughing blood, blood in cough, blood in sputum, haemoptysis, hemoptysis, khansi mein khoon, balgam mein khoon]
+dizziness:
+  label: Dizziness
+  synonyms: [vertigo, dizzy, dizziness, giddiness, giddy, lightheaded, chakkar, चक्कर]
+suicidal_thoughts:
+  label: Suicidal thoughts / self-harm
+  synonyms: [suicide, suicidal, kill myself, end my life, ending my life, take my own life, end it all, don't want to live,
+             do not want to live, no reason to live, want to die, self harm, self-harm, hurt myself, khudkushi, aatmahatya,
+             marna chahta, marna chahti, jeena nahi chahta, jeena nahi chahti, आत्महत्या, मरना चाहता, मरना चाहती]
+snake_bite:
+  label: Snake bite
+  synonyms: [snake bite, snakebite, bitten by snake, bitten by a snake, saanp ne kaata, saanp ne kata, saap ne kaata, saap ne kata,
+             सांप ने काटा]
+poisoning:
+  label: Poisoning / overdose
+  synonyms: [kerosene, drank kerosene, bleach, phenyl, rat poison, toilet cleaner, mitti ka tel, केरोसिन, poisoning, poison, pesticide, insecticide, overdose, overdosed, took too many tablets, too many tablets, too many pills,
+             too many sleeping tablets, too many sleeping pills, swallowed tablets, neend ki goliyan, zyada goliyan kha li, keetnashak, zeher, zehar,
+             जहर, कीटनाशक]
+  exclude: [food poisoning, food poison]   # a match inside these phrases is ignored
+dog_bite:
+  label: Animal bite
+  synonyms: [monkey bit, bitten by a monkey, bitten by a stray, cat bite, cat bit, bitten by a cat, rat bite, bandar ne kaata, bandar ne kata, dog bite, dog bit, bitten by dog, bitten by a dog, monkey bite, animal bite, kutte ne kaata, kutte ne kata, bandar ne kaata,
+             कुत्ते ने काटा]
+burns:
+  label: Burns
+  synonyms: [burn, burns, burnt, scald, jal gaya, jal gayi, jalne, जल गया]
+head_injury:
+  label: Head injury
+  synonyms: [head trauma, head pain after injury, trauma to head, head injury, hit my head, hit his head, hit her head, fell on head, sir pe chot, sir par chot, sir mein chot, सिर पर चोट]
+vaginal_bleeding:
+  label: Vaginal bleeding
+  synonyms: [vaginal bleeding, bleeding from vagina, bleeding down below, spotting, yoni se khoon]
+reduced_fetal_movement:
+  label: Reduced fetal movement
+  synonyms: [baby not moving, reduced fetal movement, reduced fetal movements, less baby movement, bachcha hil nahi raha,
+             baccha hil nahi raha, bachche ki harkat kam]
+severe_dehydration:
+  label: Signs of severe dehydration
+  synonyms: [not passing urine, no urine, sunken eyes, very dry mouth, peshab nahi, peshaab nahi aa raha, आंखें धंसी]
+not_feeding:
+  label: Infant not feeding / lethargic
+  synonyms: [not feeding, not breastfeeding, refusing feeds, lethargic, floppy, doodh nahi pee raha, doodh nahi pi raha, sust]
+weakness:
+  label: General weakness
+  synonyms: [weakness, weak, tired, fatigue, kamzori, थकान, कमजोरी]
+body_ache:
+  label: Body ache
+  synonyms: [body ache, body pain, aches, badan dard, sharir mein dard, बदन दर्द]
+sore_throat:
+  label: Sore throat
+  synonyms: [sorethroat, sore throat, throat pain, gale mein dard, gala kharab, गले में दर्द]
+runny_nose:
+  label: Runny nose / cold
+  synonyms: [runny nose, cold, sneezing, blocked nose, zukam, naak beh, जुकाम]
+back_pain:
+  label: Back pain
+  synonyms: [back pain, backache, kamar dard, कमर दर्द]
+joint_pain:
+  label: Joint pain
+  synonyms: [joint pain, joint pains, knee pain, jodon mein dard, ghutne mein dard, जोड़ों में दर्द]
+burning_urination:
+  label: Burning urination
+  synonyms: [dysuria, burning urination, burning while urinating, pain while urinating, peshab mein jalan, पेशाब में जलन]
+nausea:
+  label: Nausea
+  synonyms: [nausea, nauseous, nauseated, feel sick, feeling sick, ji machal, ji michla, जी मिचला]
+eye_redness:
+  label: Red or watery eye
+  synonyms: [red eye, red eyes, eye is red, watery eye, watery eyes, eye itching, itchy eyes, aankh laal, aankh se paani, आंख लाल]
+ear_pain:
+  label: Ear pain
+  synonyms: [otalgia, ear pain, earache, ear ache, kaan dard, kaan mein dard, कान दर्द]
+toothache:
+  label: Toothache
+  synonyms: [toothache, tooth ache, tooth pain, daant dard, daant mein dard, दांत दर्द]
+itching:
+  label: Itching
+  synonyms: [urticaria, hives, itching, itchy, khujli, खुजली]
+acidity:
+  label: Acidity / heartburn
+  synonyms: [acidity, heartburn, acid reflux, gas problem, khatti dakar, जलन सीने में]
+constipation:
+  label: Constipation
+  synonyms: [constipation, constipated, kabz, कब्ज]
+routine_request:
+  label: Routine request (refill, follow-up, check-up)
+  synonyms: [refill, prescription, repeat medicines, follow-up, follow up, check-up, checkup, routine checkup, medical certificate, dawai khatam, dawai lene]
+cardiac_arrest:
+  label: Cardiac arrest / after CPR
+  synonyms: [cardiac arrest, arrest, post-cpr, post cpr, cpr, no pulse, not breathing, saans nahi le raha, saans nahi le rahi]
+injury_minor_site:
+  label: Injury or wound (limb, face, skin)
+  synonyms: [arm injury, leg injury, hand injury, foot injury, finger injury, toe injury, toe pain, finger pain, facial injury, open wound, laceration, abrasion, contusion, bruise, chot lagi, chot lag gayi, मोच]
+hematuria:
+  label: Blood in urine
+  synonyms: [hematuria, haematuria, blood in urine, red urine, peshab mein khoon, पेशाब में खून]
+numbness:
+  label: Numbness / tingling
+  synonyms: [paresthesia, paraesthesia, tingling, pins and needles, sunnapan, jhunjhunahat]

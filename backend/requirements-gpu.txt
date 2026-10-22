@@ -1,0 +1,2 @@
+# Optional: local speech-to-text on your GPU (falls back to Gemini if not installed)
+faster-whisper>=1.0

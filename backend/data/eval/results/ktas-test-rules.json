@@ -1,0 +1,5658 @@
+{
+ "name": "ktas-test-rules",
+ "provider": "rules",
+ "models": [
+  "rules"
+ ],
+ "engine_version": "phase5-0.5",
+ "dataset_version": "ktas-1",
+ "case_file": "ktas_test.json",
+ "run_at": "2026-10-22T08:45:51.873627+00:00",
+ "machine": {
+  "platform": "macOS-26.4.1-arm64-arm-64bit",
+  "python": "3.11.7",
+  "cpus": 8
+ },
+ "metrics": {
+  "n": 150,
+  "scored": 150,
+  "errors": 0,
+  "accuracy": 0.38,
+  "within_one": 0.92,
+  "under_triage": 0.153,
+  "under_triage_urgent": 0.259,
+  "urgent_cases": 27,
+  "severe_under_triage": 1,
+  "over_triage": 0.467,
+  "weighted_kappa": 0.236,
+  "confusion": {
+   "P1": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0,
+    "P4": 0
+   },
+   "P2": {
+    "P1": 9,
+    "P2": 11,
+    "P3": 6,
+    "P4": 1
+   },
+   "P3": {
+    "P1": 10,
+    "P2": 4,
+    "P3": 29,
+    "P4": 16
+   },
+   "P4": {
+    "P1": 0,
+    "P2": 1,
+    "P3": 46,
+    "P4": 17
+   }
+  },
+  "by_category": {
+   "real-ed": {
+    "n": 150,
+    "accuracy": 0.38,
+    "under_triage": 23
+   }
+  },
+  "by_language": {
+   "en": {
+    "n": 150,
+    "accuracy": 0.38,
+    "under_triage": 23
+   }
+  },
+  "red_flag_recall": null,
+  "false_alarms_on_routine": 1,
+  "routine_cases": 64,
+  "flag_types": {
+   "suspicious": {
+    "tp": 0,
+    "fn": 0,
+    "fp": 0,
+    "recall": null,
+    "precision": null
+   },
+   "conflicting": {
+    "tp": 0,
+    "fn": 0,
+    "fp": 0,
+    "recall": null,
+    "precision": null
+   },
+   "unclear": {
+    "tp": 0,
+    "fn": 0,
+    "fp": 43,
+    "recall": null,
+    "precision": 0.0
+   }
+  },
+  "latency_ms": {
+   "mean": 85,
+   "p50": 88,
+   "p95": 146
+  },
+  "extraction_ms": {
+   "mean": 1,
+   "p50": 1,
+   "p95": 1
+  },
+  "fallbacks": 0,
+  "misses": [
+   {
+    "id": "ktas0086",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P4",
+    "direction": "under",
+    "reasons": [
+     "No warning signs detected in the information provided."
+    ],
+    "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0087",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P4",
+    "direction": "under",
+    "reasons": [
+     "No warning signs detected in the information provided."
+    ],
+    "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0101",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P4",
+    "direction": "under",
+    "reasons": [
+     "No warning signs detected in the information provided."
+    ],
+    "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0111",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P4",
+    "direction": "under",
+    "reasons": [
+     "No warning signs detected in the information provided."
+    ],
+    "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0126",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P2",
+    "got": "P4",
+    "direction": "under",
+    "reasons": [
+     "No warning signs detected in the information provided."
+    ],
+    "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0131",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P2",
+    "got": "P3",
+    "direction": "under",
+    "reasons": [
+     "NEWS2 score 3 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0157",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P2",
+    "got": "P3",
+    "direction": "under",
+    "reasons": [
+     "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 2, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0158",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P2",
+    "got": "P3",
+    "direction": "under",
+    "reasons": [
+     "NEWS2 score 4 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0172",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P2",
+    "got": "P3",
+    "direction": "under",
+    "reasons": [
+     "NEWS2 score 3 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0178",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P4",
+    "direction": "under",
+    "reasons": [
+     "No warning signs detected in the information provided."
+    ],
+    "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0396",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P4",
+    "direction": "under",
+    "reasons": [
+     "No warning signs detected in the information provided."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0480",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P4",
+    "direction": "under",
+    "reasons": [
+     "No warning signs detected in the information provided."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0600",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P4",
+    "direction": "under",
+    "reasons": [
+     "No warning signs detected in the information provided."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0726",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P4",
+    "direction": "under",
+    "reasons": [
+     "No warning signs detected in the information provided."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0736",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P4",
+    "direction": "under",
+    "reasons": [
+     "No warning signs detected in the information provided."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0755",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P4",
+    "direction": "under",
+    "reasons": [
+     "No warning signs detected in the information provided."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0756",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P2",
+    "got": "P3",
+    "direction": "under",
+    "reasons": [
+     "NEWS2 score 3 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0819",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P4",
+    "direction": "under",
+    "reasons": [
+     "No warning signs detected in the information provided."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0903",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P4",
+    "direction": "under",
+    "reasons": [
+     "No warning signs detected in the information provided."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0919",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P4",
+    "direction": "under",
+    "reasons": [
+     "No warning signs detected in the information provided."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0935",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P4",
+    "direction": "under",
+    "reasons": [
+     "No warning signs detected in the information provided."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0970",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P4",
+    "direction": "under",
+    "reasons": [
+     "No warning signs detected in the information provided."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas1002",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P2",
+    "got": "P3",
+    "direction": "under",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0052",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal.",
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 5, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0053",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal.",
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0064",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 4, nurse 5. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0070",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 5. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0083",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 5. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0116",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P2",
+    "got": "P1",
+    "direction": "over",
+    "reasons": [
+     "Low blood pressure (systolic <= 90): Systolic BP of 90 mmHg or below may indicate shock.",
+     "NEWS2 score 7 (high risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0132",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P2",
+    "got": "P1",
+    "direction": "over",
+    "reasons": [
+     "Very slow heart rate (<= 40): Heart rate of 40 or below scores 3 on NEWS2.",
+     "Breathlessness: Breathing difficulty needs early assessment and oxygen saturation measurement."
+    ],
+    "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0138",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 4, nurse 5. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0141",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P2",
+    "got": "P1",
+    "direction": "over",
+    "reasons": [
+     "Very low oxygen saturation (SpO2 < 90%): SpO2 below 90% indicates significant hypoxia.",
+     "Breathlessness: Breathing difficulty needs early assessment and oxygen saturation measurement."
+    ],
+    "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0161",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P2",
+    "got": "P1",
+    "direction": "over",
+    "reasons": [
+     "Low blood pressure (systolic <= 90): Systolic BP of 90 mmHg or below may indicate shock.",
+     "NEWS2 score 8 (high risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0188",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 5, nurse 5. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0204",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 3 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0217",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0240",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0243",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0273",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0293",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal.",
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0311",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 5, nurse 5. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0322",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 3 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal.",
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0342",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0359",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 5, nurse 5. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0363",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 2 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0367",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0371",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P1",
+    "direction": "over",
+    "reasons": [
+     "Extreme heart rate (> 130 or <= 40): Heart rate above 130 scores 3 on NEWS2.",
+     "NEWS2 score 3 (low-medium risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0407",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0436",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0474",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0513",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0524",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0526",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P1",
+    "direction": "over",
+    "reasons": [
+     "Extreme heart rate (> 130 or <= 40): Heart rate above 130 scores 3 on NEWS2.",
+     "NEWS2 score 3 (low-medium risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0548",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0615",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0643",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0651",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0653",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0675",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0697",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0759",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P2",
+    "got": "P1",
+    "direction": "over",
+    "reasons": [
+     "Abnormal breathing rate (>= 25 or <= 8): Respiratory rate of 25 or more scores 3 on NEWS2.",
+     "Low blood pressure (systolic <= 90): Systolic BP of 90 mmHg or below may indicate shock."
+    ],
+    "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0762",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P2",
+    "direction": "over",
+    "reasons": [
+     "Responds only to voice or newly confused (ACVPU V/C): Reduced responsiveness or new confusion scores 3 on NEWS2 and needs urgent review.",
+     "NEWS2 score 3 (low-medium risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0793",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0809",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 5, nurse 5. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0837",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0838",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0845",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0852",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P2",
+    "got": "P1",
+    "direction": "over",
+    "reasons": [
+     "Seizure / convulsion: Ongoing or recent seizures need immediate assessment.",
+     "Responds only to voice or newly confused (ACVPU V/C): Reduced responsiveness or new confusion scores 3 on NEWS2 and needs urgent review."
+    ],
+    "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0860",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0886",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P1",
+    "direction": "over",
+    "reasons": [
+     "Seizure / convulsion: Ongoing or recent seizures need immediate assessment.",
+     "NEWS2 score 3 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0887",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0898",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P2",
+    "direction": "over",
+    "reasons": [
+     "Chest pain: Any new chest pain needs early clinician assessment to rule out a cardiac cause."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0915",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0921",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0938",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P2",
+    "direction": "over",
+    "reasons": [
+     "Fainting / collapse: Collapse may have a cardiac or other serious cause.",
+     "NEWS2 score 2 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0953",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P2",
+    "got": "P1",
+    "direction": "over",
+    "reasons": [
+     "Low blood pressure (systolic <= 90): Systolic BP of 90 mmHg or below may indicate shock.",
+     "NEWS2 score 8 (high risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0963",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0976",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P2",
+    "got": "P1",
+    "direction": "over",
+    "reasons": [
+     "Heavy or uncontrolled bleeding: Heavy bleeding, vomiting blood or coughing blood may cause rapid deterioration.",
+     "NEWS2 score 3 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0990",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P1",
+    "direction": "over",
+    "reasons": [
+     "Possible stroke signs (FAST): ",
+     "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas0996",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas1031",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas1042",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 5, nurse 5. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas1058",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P1",
+    "direction": "over",
+    "reasons": [
+     "Possible stroke signs (FAST): "
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas1059",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P2",
+    "got": "P1",
+    "direction": "over",
+    "reasons": [
+     "Heavy or uncontrolled bleeding: Heavy bleeding, vomiting blood or coughing blood may cause rapid deterioration."
+    ],
+    "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas1077",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P1",
+    "direction": "over",
+    "reasons": [
+     "Possible stroke signs (FAST): ",
+     "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas1082",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas1091",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P2",
+    "direction": "over",
+    "reasons": [
+     "Breathlessness: Breathing difficulty needs early assessment and oxygen saturation measurement.",
+     "NEWS2 score 2 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas1109",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P1",
+    "direction": "over",
+    "reasons": [
+     "Extreme heart rate (> 130 or <= 40): Heart rate above 130 scores 3 on NEWS2.",
+     "NEWS2 score 3 (low-medium risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas1161",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P2",
+    "direction": "over",
+    "reasons": [
+     "Breathlessness: Breathing difficulty needs early assessment and oxygen saturation measurement.",
+     "NEWS2 score 3 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas1167",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P1",
+    "direction": "over",
+    "reasons": [
+     "Low blood pressure (systolic <= 90): Systolic BP of 90 mmHg or below may indicate shock.",
+     "Fainting / collapse: Collapse may have a cardiac or other serious cause."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas1183",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P1",
+    "direction": "over",
+    "reasons": [
+     "Responds only to pain or unresponsive (ACVPU P/U): A patient who responds only to pain or not at all needs immediate assessment of airway an",
+     "NEWS2 score 9 (high risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas1187",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P4",
+    "got": "P3",
+    "direction": "over",
+    "reasons": [
+     "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+    ],
+    "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.)."
+   },
+   {
+    "id": "ktas1204",
+    "category": "real-ed",
+    "language": "en",
+    "expected": "P3",
+    "got": "P1",
+    "direction": "over",
+    "reasons": [
+     "Seizure / convulsion: Ongoing or recent seizures need immediate assessment.",
+     "Responds only to voice or newly confused (ACVPU V/C): Reduced responsiveness or new confusion scores 3 on NEWS2 and needs urgent review."
+    ],
+    "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.)."
+   }
+  ],
+  "by_split": {
+   "ktas-test": {
+    "n": 150,
+    "accuracy": 0.38,
+    "within_one": 0.92,
+    "under_triage_urgent": 0.259,
+    "urgent_cases": 27,
+    "severe_under_triage": 1,
+    "over_triage": 0.467,
+    "weighted_kappa": 0.236,
+    "red_flag_recall": null
+   }
+  },
+  "nurse_baseline": {
+   "n": 150,
+   "accuracy": 0.84,
+   "within_one": 0.987,
+   "under_triage_urgent": 0.37,
+   "urgent_cases": 27,
+   "severe_under_triage": 1,
+   "over_triage": 0.02,
+   "weighted_kappa": 0.77,
+   "confusion": {
+    "P1": {
+     "P1": 0,
+     "P2": 0,
+     "P3": 0,
+     "P4": 0
+    },
+    "P2": {
+     "P1": 0,
+     "P2": 17,
+     "P3": 9,
+     "P4": 1
+    },
+    "P3": {
+     "P1": 0,
+     "P2": 0,
+     "P3": 48,
+     "P4": 11
+    },
+    "P4": {
+     "P1": 0,
+     "P2": 1,
+     "P3": 2,
+     "P4": 61
+    }
+   }
+  }
+ },
+ "rows": [
+  {
+   "id": "ktas0014",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 2. Real ED visit (Moon et al.).",
+   "latency_ms": 143,
+   "nurse": "P2",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 47,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Abd pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0032",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 18,
+   "nurse": "P3",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "vomiting [lexicon: Vomiting]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0052",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 5, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 19,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0053",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 20,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0064",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 5. Real ED visit (Moon et al.).",
+   "latency_ms": 20,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 2,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "injury_minor_site [lexicon: laceration]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0070",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 5. Real ED visit (Moon et al.).",
+   "latency_ms": 19,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0075",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 21,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 3 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Epigastric pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0077",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 22,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 2 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "headache [lexicon: Headache]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0083",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 5. Real ED visit (Moon et al.).",
+   "latency_ms": 21,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0085",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 23,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 3 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Epigastric pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0086",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 24,
+   "nurse": "P4",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Epigastric pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0087",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 24,
+   "nurse": "P4",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "fever [lexicon: Fever]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0101",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 25,
+   "nurse": "P4",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: epigastric pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0111",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 26,
+   "nurse": "P4",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: flank pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0114",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 49,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0116",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 28,
+   "nurse": "P3",
+   "got": "P1",
+   "fired_flags": [
+    "shock_bp"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Low blood pressure (systolic <= 90): Systolic BP of 90 mmHg or below may indicate shock.",
+    "NEWS2 score 7 (high risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "injury_minor_site [lexicon: Open Wound]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0126",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 27,
+   "nurse": "P3",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "weakness [lexicon: weakness]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0131",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 28,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 3 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "fever [lexicon: Fever]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0132",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 29,
+   "nurse": "P3",
+   "got": "P1",
+   "fired_flags": [
+    "bradycardia",
+    "breathlessness"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Very slow heart rate (<= 40): Heart rate of 40 or below scores 3 on NEWS2.",
+    "Breathlessness: Breathing difficulty needs early assessment and oxygen saturation measurement.",
+    "NEWS2 score 3 (low-medium risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "breathlessness [lexicon: Dyspnea]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0136",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 5. Real ED visit (Moon et al.).",
+   "latency_ms": 29,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "weakness [lexicon: weakness]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0138",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 5. Real ED visit (Moon et al.).",
+   "latency_ms": 30,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "weakness [lexicon: Weakness]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0139",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 32,
+   "nurse": "P3",
+   "got": "P2",
+   "fired_flags": [
+    "chest_pain"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Chest pain: Any new chest pain needs early clinician assessment to rule out a cardiac cause.",
+    "NEWS2 score 3 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "chest_pain [lexicon: chest discomfort]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0141",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 32,
+   "nurse": "P3",
+   "got": "P1",
+   "fired_flags": [
+    "hypoxia_severe",
+    "breathlessness"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Very low oxygen saturation (SpO2 < 90%): SpO2 below 90% indicates significant hypoxia.",
+    "Breathlessness: Breathing difficulty needs early assessment and oxygen saturation measurement.",
+    "NEWS2 score 5 (medium risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "breathlessness [lexicon: Dyspnea]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0155",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 32,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 2 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0157",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 32,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "fever [lexicon: Fever]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0158",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 34,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 4 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "fever [lexicon: Fever]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0161",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 35,
+   "nurse": "P3",
+   "got": "P1",
+   "fired_flags": [
+    "shock_bp"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Low blood pressure (systolic <= 90): Systolic BP of 90 mmHg or below may indicate shock.",
+    "NEWS2 score 8 (high risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: abdominal pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0172",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 35,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 3 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "fever [lexicon: Fever]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0178",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 60,
+   "nurse": "P4",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: abdominal pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0188",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 5, nurse 5. Real ED visit (Moon et al.).",
+   "latency_ms": 38,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0204",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 37,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 3 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Epigastric pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0206",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 37,
+   "nurse": "P4",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "vomiting [lexicon: Vomiting]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0217",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 39,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0219",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "latency_ms": 40,
+   "nurse": "P2",
+   "got": "P2",
+   "fired_flags": [
+    "chest_pain"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Chest pain: Any new chest pain needs early clinician assessment to rule out a cardiac cause.",
+    "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "chest_pain [lexicon: Pain, chest]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0231",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 63,
+   "nurse": "P4",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: epigastric pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0240",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 41,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0243",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 41,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Abd pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0273",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 42,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "vomiting [lexicon: Vomiting]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0293",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 43,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0311",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 5, nurse 5. Real ED visit (Moon et al.).",
+   "latency_ms": 66,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0319",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 45,
+   "nurse": "P4",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: flank pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0322",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 45,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 3 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0340",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 45,
+   "nurse": "P4",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: flank pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0342",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 70,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "headache [lexicon: Headache]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0358",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 47,
+   "nurse": "P4",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Epigastric pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0359",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 5, nurse 5. Real ED visit (Moon et al.).",
+   "latency_ms": 48,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0363",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 72,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 2 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "headache [lexicon: Headache]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0367",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 49,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Abdominal pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0371",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 51,
+   "nurse": "P3",
+   "got": "P1",
+   "fired_flags": [
+    "extreme_pulse"
+   ],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Extreme heart rate (> 130 or <= 40): Heart rate above 130 scores 3 on NEWS2.",
+    "NEWS2 score 3 (low-medium risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0372",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 76,
+   "nurse": "P4",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Abd pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0391",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "latency_ms": 53,
+   "nurse": "P2",
+   "got": "P2",
+   "fired_flags": [
+    "chest_pain"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Chest pain: Any new chest pain needs early clinician assessment to rule out a cardiac cause.",
+    "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "chest_pain [lexicon: chest pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0396",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 75,
+   "nurse": "P3",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "dizziness [lexicon: Dizziness]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0400",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "latency_ms": 55,
+   "nurse": "P2",
+   "got": "P2",
+   "fired_flags": [
+    "chest_pain"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Chest pain: Any new chest pain needs early clinician assessment to rule out a cardiac cause."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "chest_pain [lexicon: chest pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0406",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "latency_ms": 54,
+   "nurse": "P2",
+   "got": "P2",
+   "fired_flags": [
+    "breathlessness"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Breathlessness: Breathing difficulty needs early assessment and oxygen saturation measurement.",
+    "NEWS2 score 5 (medium risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "breathlessness [lexicon: Dyspnea]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0407",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 79,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Epigastric pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0432",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 55,
+   "nurse": "P4",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Abdomen pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0436",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 79,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Abdomen pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0450",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 58,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0463",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 84,
+   "nurse": "P4",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "injury_minor_site [lexicon: Toe injury]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0474",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 60,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0480",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 83,
+   "nurse": "P3",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "headache [lexicon: Headache]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0482",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 62,
+   "nurse": "P4",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "injury_minor_site [lexicon: Foot Injury]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0493",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 85,
+   "nurse": "P4",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "injury_minor_site [lexicon: Open Wound]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0513",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 63,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0519",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 88,
+   "nurse": "P4",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "injury_minor_site [lexicon: Facial injury]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0522",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 64,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Pain, abdominal]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0524",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 88,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0526",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 65,
+   "nurse": "P3",
+   "got": "P1",
+   "fired_flags": [
+    "extreme_pulse"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Extreme heart rate (> 130 or <= 40): Heart rate above 130 scores 3 on NEWS2.",
+    "NEWS2 score 3 (low-medium risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Abd pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0529",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "latency_ms": 88,
+   "nurse": "P2",
+   "got": "P2",
+   "fired_flags": [
+    "chest_pain"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Chest pain: Any new chest pain needs early clinician assessment to rule out a cardiac cause.",
+    "NEWS2 score 4 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "chest_pain [lexicon: chest pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0548",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 66,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0575",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 90,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Pain, abdominal]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0578",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 67,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0590",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 91,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 3 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Abd pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0596",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 91,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "fever [lexicon: Fever]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0600",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 69,
+   "nurse": "P3",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Abd pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0615",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 94,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0633",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 71,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Abd pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0643",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 93,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0648",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 95,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Pain, abdominal]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0651",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 73,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Abd pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0653",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 98,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0663",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 97,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "headache [lexicon: Headache]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0665",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "latency_ms": 75,
+   "nurse": "P2",
+   "got": "P2",
+   "fired_flags": [
+    "chest_pain"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Chest pain: Any new chest pain needs early clinician assessment to rule out a cardiac cause."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "chest_pain [lexicon: chest pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0675",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 123,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "injury_minor_site [lexicon: Finger Injury]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0692",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 100,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 2,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0697",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 79,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0707",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "latency_ms": 100,
+   "nurse": "P2",
+   "got": "P2",
+   "fired_flags": [
+    "chest_pain"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Chest pain: Any new chest pain needs early clinician assessment to rule out a cardiac cause.",
+    "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "chest_pain [lexicon: chest pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0723",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "latency_ms": 102,
+   "nurse": "P2",
+   "got": "P2",
+   "fired_flags": [
+    "chest_pain"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Chest pain: Any new chest pain needs early clinician assessment to rule out a cardiac cause.",
+    "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "chest_pain [lexicon: chest pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0726",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 101,
+   "nurse": "P3",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Abd pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0736",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 81,
+   "nurse": "P3",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: Abd pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0755",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 104,
+   "nurse": "P3",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "injury_minor_site [lexicon: Finger pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0756",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "latency_ms": 104,
+   "nurse": "P2",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 3 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "back_pain [lexicon: back pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0759",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "latency_ms": 106,
+   "nurse": "P2",
+   "got": "P1",
+   "fired_flags": [
+    "resp_rate_extreme",
+    "shock_bp",
+    "chest_pain"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Abnormal breathing rate (>= 25 or <= 8): Respiratory rate of 25 or more scores 3 on NEWS2.",
+    "Low blood pressure (systolic <= 90): Systolic BP of 90 mmHg or below may indicate shock.",
+    "NEWS2 score 7 (high risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+    "Chest pain: Any new chest pain needs early clinician assessment to rule out a cardiac cause."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "chest_pain [lexicon: Pain, chest]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0762",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 83,
+   "nurse": "P4",
+   "got": "P2",
+   "fired_flags": [
+    "acvpu_voice_or_confused"
+   ],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Responds only to voice or newly confused (ACVPU V/C): Reduced responsiveness or new confusion scores 3 on NEWS2 and needs urgent review.",
+    "NEWS2 score 3 (low-medium risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0765",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 106,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0773",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 107,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "dizziness [lexicon: Dizziness]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0787",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 109,
+   "nurse": "P4",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "vomiting [lexicon: Vomiting]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0793",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 110,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0809",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 5, nurse 5. Real ED visit (Moon et al.).",
+   "latency_ms": 90,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0819",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 117,
+   "nurse": "P3",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "weakness [lexicon: weakness]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0822",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 112,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "dizziness [lexicon: Dizziness]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0837",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 112,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0838",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 111,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "injury_minor_site [lexicon: laceration]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0845",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 115,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0852",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "latency_ms": 91,
+   "nurse": "P2",
+   "got": "P1",
+   "fired_flags": [
+    "seizure",
+    "acvpu_voice_or_confused"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Seizure / convulsion: Ongoing or recent seizures need immediate assessment.",
+    "Responds only to voice or newly confused (ACVPU V/C): Reduced responsiveness or new confusion scores 3 on NEWS2 and needs urgent review.",
+    "NEWS2 score 3 (low-medium risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "seizure [lexicon: seizure]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0860",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 115,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "vomiting [lexicon: Vomiting]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0863",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 116,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "dizziness [lexicon: Dizziness]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0876",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 117,
+   "nurse": "P4",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "injury_minor_site [lexicon: laceration]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0878",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 117,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "diarrhoea [lexicon: Diarrhea]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0886",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 117,
+   "nurse": "P3",
+   "got": "P1",
+   "fired_flags": [
+    "seizure"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Seizure / convulsion: Ongoing or recent seizures need immediate assessment.",
+    "NEWS2 score 3 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "seizure [lexicon: seizure]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0887",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 119,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "bleeding [lexicon: Epistaxis]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0898",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 120,
+   "nurse": "P3",
+   "got": "P2",
+   "fired_flags": [
+    "chest_pain"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Chest pain: Any new chest pain needs early clinician assessment to rule out a cardiac cause."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "chest_pain [lexicon: chest discomfort]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0903",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 120,
+   "nurse": "P3",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "vaginal_bleeding [lexicon: Vaginal bleeding]",
+    "bleeding [lexicon: bleeding]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0905",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 119,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 3 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0909",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 121,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "vaginal_bleeding [lexicon: Vaginal bleeding]",
+    "bleeding [lexicon: bleeding]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0915",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 123,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "injury_minor_site [lexicon: Open Wound]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0919",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 123,
+   "nurse": "P3",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "injury_minor_site [lexicon: Facial injury]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0921",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 122,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "diarrhoea [lexicon: Diarrhea]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0923",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 123,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0925",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 126,
+   "nurse": "P4",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "injury_minor_site [lexicon: laceration]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0929",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 126,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0934",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 125,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0935",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 127,
+   "nurse": "P3",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "dizziness [lexicon: Dizziness]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0938",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 127,
+   "nurse": "P3",
+   "got": "P2",
+   "fired_flags": [
+    "fainting"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Fainting / collapse: Collapse may have a cardiac or other serious cause.",
+    "NEWS2 score 2 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "fainting [lexicon: Syncope]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0953",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "latency_ms": 128,
+   "nurse": "P2",
+   "got": "P1",
+   "fired_flags": [
+    "shock_bp",
+    "acvpu_voice_or_confused",
+    "breathlessness"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Low blood pressure (systolic <= 90): Systolic BP of 90 mmHg or below may indicate shock.",
+    "NEWS2 score 8 (high risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+    "Responds only to voice or newly confused (ACVPU V/C): Reduced responsiveness or new confusion scores 3 on NEWS2 and needs urgent review.",
+    "Breathlessness: Breathing difficulty needs early assessment and oxygen saturation measurement."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "breathlessness [lexicon: Dyspnea]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0963",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 134,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0970",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 131,
+   "nurse": "P3",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "dizziness [lexicon: vertigo]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0971",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "latency_ms": 131,
+   "nurse": "P2",
+   "got": "P2",
+   "fired_flags": [
+    "gi_bleed"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Blood in stool / black stool: Black or bloody stools may indicate gastrointestinal bleeding.",
+    "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "blood_in_stool [lexicon: Melena]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0976",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "latency_ms": 130,
+   "nurse": "P2",
+   "got": "P1",
+   "fired_flags": [
+    "heavy_bleeding"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Heavy or uncontrolled bleeding: Heavy bleeding, vomiting blood or coughing blood may cause rapid deterioration.",
+    "NEWS2 score 3 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "vomiting_blood [lexicon: Hematemesis]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0982",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 132,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "dizziness [lexicon: Dizziness]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0990",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 135,
+   "nurse": "P3",
+   "got": "P1",
+   "fired_flags": [
+    "stroke_fast"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Possible stroke signs (FAST): ",
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "slurred_speech [lexicon: Dysarthria]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas0996",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 156,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas1002",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "latency_ms": 136,
+   "nurse": "P2",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas1003",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 136,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas1031",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 136,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "NEWS2 score 2 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal.",
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas1042",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 5, nurse 5. Real ED visit (Moon et al.).",
+   "latency_ms": 137,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas1053",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 138,
+   "nurse": "P3",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas1058",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 160,
+   "nurse": "P3",
+   "got": "P1",
+   "fired_flags": [
+    "stroke_fast"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Possible stroke signs (FAST): "
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "one_sided_weakness [lexicon: Motor weakness]",
+    "weakness [lexicon: weakness]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas1059",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "latency_ms": 138,
+   "nurse": "P2",
+   "got": "P1",
+   "fired_flags": [
+    "heavy_bleeding"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Heavy or uncontrolled bleeding: Heavy bleeding, vomiting blood or coughing blood may cause rapid deterioration."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "vomiting_blood [lexicon: Hematemesis]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas1077",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 140,
+   "nurse": "P3",
+   "got": "P1",
+   "fired_flags": [
+    "stroke_fast"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Possible stroke signs (FAST): ",
+    "NEWS2 score 1 (low risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "one_sided_weakness [lexicon: Motor weakness]",
+    "weakness [lexicon: weakness]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas1082",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 142,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "NEWS2 score 1 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "fever [lexicon: Fever]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas1091",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 143,
+   "nurse": "P3",
+   "got": "P2",
+   "fired_flags": [
+    "breathlessness"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Breathlessness: Breathing difficulty needs early assessment and oxygen saturation measurement.",
+    "NEWS2 score 2 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "breathlessness [lexicon: Dyspnea]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas1099",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P2",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 2, nurse 2. Real ED visit (Moon et al.).",
+   "latency_ms": 163,
+   "nurse": "P2",
+   "got": "P2",
+   "fired_flags": [
+    "confusion"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "New confusion or drowsiness: New confusion can indicate sepsis, stroke, low sugar or other serious illness."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "confusion [lexicon: Mental change]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas1109",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 143,
+   "nurse": "P3",
+   "got": "P1",
+   "fired_flags": [
+    "extreme_pulse"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Extreme heart rate (> 130 or <= 40): Heart rate above 130 scores 3 on NEWS2.",
+    "NEWS2 score 3 (low-medium risk); Partial score: 5/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "weakness [lexicon: weakness]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas1161",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 143,
+   "nurse": "P3",
+   "got": "P2",
+   "fired_flags": [
+    "breathlessness"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Breathlessness: Breathing difficulty needs early assessment and oxygen saturation measurement.",
+    "NEWS2 score 3 (low risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "breathlessness [lexicon: Dyspnea]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas1167",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 166,
+   "nurse": "P3",
+   "got": "P1",
+   "fired_flags": [
+    "shock_bp",
+    "fainting"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Low blood pressure (systolic <= 90): Systolic BP of 90 mmHg or below may indicate shock.",
+    "Fainting / collapse: Collapse may have a cardiac or other serious cause.",
+    "NEWS2 score 3 (low-medium risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "fainting [lexicon: Loss of consciousness]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas1183",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 146,
+   "nurse": "P3",
+   "got": "P1",
+   "fired_flags": [
+    "acvpu_unresponsive",
+    "breathlessness"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Responds only to pain or unresponsive (ACVPU P/U): A patient who responds only to pain or not at all needs immediate assessment of airway an",
+    "NEWS2 score 9 (high risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal.",
+    "Breathlessness: Breathing difficulty needs early assessment and oxygen saturation measurement."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "breathlessness [lexicon: Dyspnea]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas1187",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 147,
+   "nurse": "P4",
+   "got": "P3",
+   "fired_flags": [],
+   "detected_flag_types": [
+    "unclear"
+   ],
+   "reasons": [
+    "Data quality concerns: No recognisable symptom or test result could be extracted. A clinician should verify."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas1204",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P3",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 3, nurse 3. Real ED visit (Moon et al.).",
+   "latency_ms": 147,
+   "nurse": "P3",
+   "got": "P1",
+   "fired_flags": [
+    "seizure",
+    "acvpu_voice_or_confused"
+   ],
+   "detected_flag_types": [],
+   "reasons": [
+    "Seizure / convulsion: Ongoing or recent seizures need immediate assessment.",
+    "Responds only to voice or newly confused (ACVPU V/C): Reduced responsiveness or new confusion scores 3 on NEWS2 and needs urgent review.",
+    "NEWS2 score 4 (low-medium risk); Partial score: 6/7 parameters available. Missing parameters are not assumed normal."
+   ],
+   "extraction_ms": 0,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "seizure [lexicon: Convulsion]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  },
+  {
+   "id": "ktas1213",
+   "split": "ktas-test",
+   "category": "real-ed",
+   "language": "en",
+   "expected": "P4",
+   "expected_flags": [],
+   "expected_flag_types": [],
+   "note": "KTAS expert 4, nurse 4. Real ED visit (Moon et al.).",
+   "latency_ms": 170,
+   "nurse": "P4",
+   "got": "P4",
+   "fired_flags": [],
+   "detected_flag_types": [],
+   "reasons": [
+    "No warning signs detected in the information provided."
+   ],
+   "extraction_ms": 1,
+   "provider": "rules",
+   "fallback_used": false,
+   "symptoms": [
+    "abdominal_pain [lexicon: abdominal pain]"
+   ],
+   "signals": [],
+   "uncertainties": [
+    "Extracted by deterministic rules (no language model); recall may be limited."
+   ]
+  }
+ ]
+}
